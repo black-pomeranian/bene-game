@@ -3,7 +3,7 @@
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 .utmp/
-bene-game/[Ll]ibrary/
+bene-game/[Ll]ibrary/*
 bene-game/[Tt]emp/
 bene-game/[Oo]bj/
 bene-game/[Bb]uild/
