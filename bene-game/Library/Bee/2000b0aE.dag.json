@@ -333,7 +333,8 @@
         325,
         326,
         327,
-        328
+        328,
+        329
       ],
       "OverwriteOutputs": false,
       "DebugActionIndex": 0
@@ -356,7 +357,7 @@
       "DisplayName": "Writing UnityEngine.TestRunner.rsp",
       "ActionType": "WriteFile",
       "PayloadOffset": 253,
-      "PayloadLength": 43538,
+      "PayloadLength": 43663,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
@@ -368,7 +369,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEngine.TestRunner.rsp2",
       "DisplayName": "Writing UnityEngine.TestRunner.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 43885,
+      "PayloadOffset": 44010,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
@@ -585,6 +586,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll",
         "Library/PackageCache/com.unity.test-framework@1.1.33/UnityEngine.TestRunner/AssemblyInfo.cs",
@@ -713,7 +715,7 @@
         1,
         2,
         3,
-        89
+        90
       ],
       "ToUseDependencies": [
         1,
@@ -835,34 +837,34 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        199,
-        206,
+        120,
+        127,
+        200,
         207,
         208,
-        215,
-        222,
-        229,
-        242,
+        209,
+        216,
+        223,
+        230,
         243,
-        256,
+        244,
         257,
-        270,
-        273,
+        258,
+        271,
         274,
         275,
         276,
@@ -915,7 +917,8 @@
         323,
         324,
         325,
-        326
+        326,
+        327
       ],
       "OverwriteOutputs": false,
       "DebugActionIndex": 6
@@ -2121,6 +2124,21 @@
       "DebugActionIndex": 86
     },
     {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0",
+      "Action": "\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.25f1\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm\" \"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.25f1\\Editor\\Data\\PlaybackEngines\\WebGLSupport\\UnityEditor.WebGL.Extensions.dll\"",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 87
+    },
+    {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
       "DisplayName": "MovedFromExtractor UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0",
       "Action": "\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.25f1\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm\" \"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.25f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\UnityEditor.WindowsStandalone.Extensions.dll\"",
@@ -2133,20 +2151,20 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 87
+      "DebugActionIndex": 88
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEngine.TestRunner.dll.mvfrm.rsp",
       "DisplayName": "Writing UnityEngine.TestRunner.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 44054,
-      "PayloadLength": 7087,
+      "PayloadOffset": 44179,
+      "PayloadLength": 7173,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEngine.TestRunner.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 88
+      "DebugActionIndex": 89
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/UnityEngine.TestRunner.dll.mvfrm",
@@ -2234,6 +2252,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe",
         "Library/Bee/artifacts/2000b0aE.dag/UnityEngine.TestRunner.dll.mvfrm.rsp"
@@ -2324,50 +2343,51 @@
         85,
         86,
         87,
-        88
+        88,
+        89
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 89
+      "DebugActionIndex": 90
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.UnityAdditionalFile.txt",
       "DisplayName": "Writing UnityEngine.UI.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 51246,
+      "PayloadOffset": 51457,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 90
+      "DebugActionIndex": 91
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.rsp",
       "DisplayName": "Writing UnityEngine.UI.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 51384,
-      "PayloadLength": 38066,
+      "PayloadOffset": 51595,
+      "PayloadLength": 38191,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.rsp"
       ],
-      "DebugActionIndex": 91
+      "DebugActionIndex": 92
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.rsp2",
       "DisplayName": "Writing UnityEngine.UI.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 89536,
+      "PayloadOffset": 89872,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.rsp2"
       ],
-      "DebugActionIndex": 92
+      "DebugActionIndex": 93
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.dll (+2 others)",
@@ -2577,6 +2597,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/log4netPlastic.dll",
         "Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll",
@@ -2682,14 +2703,14 @@
         "Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.ref.dll"
       ],
       "ToBuildDependencies": [
-        90,
         91,
         92,
-        101
+        93,
+        102
       ],
       "ToUseDependencies": [
-        90,
-        92
+        91,
+        93
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.rsp"
@@ -2702,7 +2723,7 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 93
+      "DebugActionIndex": 94
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
@@ -2717,7 +2738,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 94
+      "DebugActionIndex": 95
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -2732,7 +2753,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 95
+      "DebugActionIndex": 96
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.IonicZip.dll_A132FB1912DE9259.mvfrm",
@@ -2747,7 +2768,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 96
+      "DebugActionIndex": 97
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.YamlDotNet.dll_DF06AC15F51AC0F3.mvfrm",
@@ -2762,7 +2783,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 97
+      "DebugActionIndex": 98
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.TextureAssets.dll_7624D569B5E81EEB.mvfrm",
@@ -2777,7 +2798,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 98
+      "DebugActionIndex": 99
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.Antlr3.Runtime.dll_9073D2F725E3D112.mvfrm",
@@ -2792,20 +2813,20 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 99
+      "DebugActionIndex": 100
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.dll.mvfrm.rsp",
       "DisplayName": "Writing UnityEngine.UI.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 89697,
-      "PayloadLength": 7625,
+      "PayloadOffset": 90033,
+      "PayloadLength": 7711,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 100
+      "DebugActionIndex": 101
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.dll.mvfrm",
@@ -2893,6 +2914,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -2989,56 +3011,57 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        100
+        100,
+        101
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 101
+      "DebugActionIndex": 102
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEditor.TestRunner.UnityAdditionalFile.txt",
       "DisplayName": "Writing UnityEditor.TestRunner.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 97435,
+      "PayloadOffset": 97857,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEditor.TestRunner.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 102
+      "DebugActionIndex": 103
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEditor.TestRunner.rsp",
       "DisplayName": "Writing UnityEditor.TestRunner.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 97581,
-      "PayloadLength": 50067,
+      "PayloadOffset": 98003,
+      "PayloadLength": 50192,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEditor.TestRunner.rsp"
       ],
-      "DebugActionIndex": 103
+      "DebugActionIndex": 104
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEditor.TestRunner.rsp2",
       "DisplayName": "Writing UnityEditor.TestRunner.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 147742,
+      "PayloadOffset": 148289,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEditor.TestRunner.rsp2"
       ],
-      "DebugActionIndex": 104
+      "DebugActionIndex": 105
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/UnityEditor.TestRunner.dll (+2 others)",
@@ -3131,6 +3154,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -3433,14 +3457,14 @@
       ],
       "ToBuildDependencies": [
         4,
-        102,
         103,
         104,
-        113
+        105,
+        114
       ],
       "ToUseDependencies": [
-        102,
-        104
+        103,
+        105
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEditor.TestRunner.rsp"
@@ -3453,7 +3477,7 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 105
+      "DebugActionIndex": 106
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TestRunner.ref.dll_50E26CF31C06CD18.mvfrm",
@@ -3471,7 +3495,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 106
+      "DebugActionIndex": 107
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ARModule.dll_419B40F5BAAC650D.mvfrm",
@@ -3486,7 +3510,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 107
+      "DebugActionIndex": 108
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ClusterInputModule.dll_93CFD7916E240F6C.mvfrm",
@@ -3501,7 +3525,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 108
+      "DebugActionIndex": 109
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ClusterRendererModule.dll_E87088EC0F7B3855.mvfrm",
@@ -3516,7 +3540,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 109
+      "DebugActionIndex": 110
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.NVIDIAModule.dll_3E5E5E42605B36E7.mvfrm",
@@ -3531,7 +3555,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 110
+      "DebugActionIndex": 111
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.VirtualTexturingModule.dll_DDA8AF2F92FFA7F9.mvfrm",
@@ -3546,20 +3570,20 @@
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 111
+      "DebugActionIndex": 112
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEditor.TestRunner.dll.mvfrm.rsp",
       "DisplayName": "Writing UnityEditor.TestRunner.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 147911,
-      "PayloadLength": 7602,
+      "PayloadOffset": 148458,
+      "PayloadLength": 7688,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEditor.TestRunner.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 112
+      "DebugActionIndex": 113
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/UnityEditor.TestRunner.dll.mvfrm",
@@ -3653,6 +3677,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe",
         "Library/Bee/artifacts/2000b0aE.dag/UnityEditor.TestRunner.dll.mvfrm.rsp"
@@ -3743,56 +3768,57 @@
         85,
         86,
         87,
-        106,
+        88,
         107,
         108,
         109,
         110,
         111,
-        112
+        112,
+        113
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 113
+      "DebugActionIndex": 114
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.UnityAdditionalFile.txt",
       "DisplayName": "Writing UnityEditor.UI.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 155618,
+      "PayloadOffset": 156251,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 114
+      "DebugActionIndex": 115
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.rsp",
       "DisplayName": "Writing UnityEditor.UI.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 155756,
-      "PayloadLength": 35677,
+      "PayloadOffset": 156389,
+      "PayloadLength": 35802,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.rsp"
       ],
-      "DebugActionIndex": 115
+      "DebugActionIndex": 116
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.rsp2",
       "DisplayName": "Writing UnityEditor.UI.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 191519,
+      "PayloadOffset": 192277,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.rsp2"
       ],
-      "DebugActionIndex": 116
+      "DebugActionIndex": 117
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.dll (+2 others)",
@@ -3885,6 +3911,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -4072,16 +4099,16 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        114,
+        94,
+        106,
         115,
         116,
-        121
+        117,
+        122
       ],
       "ToUseDependencies": [
-        114,
-        116
+        115,
+        117
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.rsp"
@@ -4094,7 +4121,7 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 117
+      "DebugActionIndex": 118
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.TestRunner.ref.dll_84C42244F0436F2D.mvfrm",
@@ -4108,11 +4135,11 @@
         "Library/Bee/artifacts/mvdfrm/UnityEditor.TestRunner.ref.dll_84C42244F0436F2D.mvfrm"
       ],
       "ToBuildDependencies": [
-        105
+        106
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 118
+      "DebugActionIndex": 119
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UI.ref.dll_7A28423D4A766FDA.mvfrm",
@@ -4126,24 +4153,24 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.UI.ref.dll_7A28423D4A766FDA.mvfrm"
       ],
       "ToBuildDependencies": [
-        93
+        94
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 119
+      "DebugActionIndex": 120
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.dll.mvfrm.rsp",
       "DisplayName": "Writing UnityEditor.UI.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 191680,
-      "PayloadLength": 8300,
+      "PayloadOffset": 192438,
+      "PayloadLength": 8386,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 120
+      "DebugActionIndex": 121
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.dll.mvfrm",
@@ -4239,6 +4266,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -4335,64 +4363,65 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        120
+        120,
+        121
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 121
+      "DebugActionIndex": 122
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.EditorCoroutines.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.EditorCoroutines.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 200100,
+      "PayloadOffset": 200944,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.EditorCoroutines.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 122
+      "DebugActionIndex": 123
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.EditorCoroutines.Editor.rsp",
       "DisplayName": "Writing Unity.EditorCoroutines.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 200253,
-      "PayloadLength": 33131,
+      "PayloadOffset": 201097,
+      "PayloadLength": 33256,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.EditorCoroutines.Editor.rsp"
       ],
-      "DebugActionIndex": 123
+      "DebugActionIndex": 124
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.EditorCoroutines.Editor.rsp2",
       "DisplayName": "Writing Unity.EditorCoroutines.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 233485,
+      "PayloadOffset": 234454,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.EditorCoroutines.Editor.rsp2"
       ],
-      "DebugActionIndex": 124
+      "DebugActionIndex": 125
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.EditorCoroutines.Editor.dll (+2 others)",
@@ -4485,6 +4514,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -4640,17 +4670,17 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        122,
+        94,
+        106,
+        118,
         123,
         124,
-        128
+        125,
+        129
       ],
       "ToUseDependencies": [
-        122,
-        124
+        123,
+        125
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.EditorCoroutines.Editor.rsp"
@@ -4663,7 +4693,7 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 125
+      "DebugActionIndex": 126
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.UI.ref.dll_BDC26BE24454476F.mvfrm",
@@ -4677,24 +4707,24 @@
         "Library/Bee/artifacts/mvdfrm/UnityEditor.UI.ref.dll_BDC26BE24454476F.mvfrm"
       ],
       "ToBuildDependencies": [
-        117
+        118
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 126
+      "DebugActionIndex": 127
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.EditorCoroutines.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.EditorCoroutines.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 233661,
-      "PayloadLength": 8376,
+      "PayloadOffset": 234630,
+      "PayloadLength": 8462,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.EditorCoroutines.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 127
+      "DebugActionIndex": 128
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.EditorCoroutines.Editor.dll.mvfrm",
@@ -4791,6 +4821,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -4887,65 +4918,66 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        127
+        120,
+        127,
+        128
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 128
+      "DebugActionIndex": 129
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.Performance.Profile-Analyzer.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 242169,
+      "PayloadOffset": 243224,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 129
+      "DebugActionIndex": 130
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.rsp",
       "DisplayName": "Writing Unity.Performance.Profile-Analyzer.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 242334,
-      "PayloadLength": 35875,
+      "PayloadOffset": 243389,
+      "PayloadLength": 36000,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.rsp"
       ],
-      "DebugActionIndex": 130
+      "DebugActionIndex": 131
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.rsp2",
       "DisplayName": "Writing Unity.Performance.Profile-Analyzer.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 278322,
+      "PayloadOffset": 279502,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.rsp2"
       ],
-      "DebugActionIndex": 131
+      "DebugActionIndex": 132
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.dll (+2 others)",
@@ -5038,6 +5070,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -5222,17 +5255,17 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        129,
+        94,
+        106,
+        118,
         130,
         131,
-        134
+        132,
+        135
       ],
       "ToUseDependencies": [
-        129,
-        131
+        130,
+        132
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.rsp"
@@ -5245,20 +5278,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 132
+      "DebugActionIndex": 133
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.Performance.Profile-Analyzer.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 278510,
-      "PayloadLength": 8376,
+      "PayloadOffset": 279690,
+      "PayloadLength": 8462,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 133
+      "DebugActionIndex": 134
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.dll.mvfrm",
@@ -5355,6 +5388,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -5451,65 +5485,66 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        133
+        120,
+        127,
+        134
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 134
+      "DebugActionIndex": 135
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.PlasticSCM.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.PlasticSCM.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 287000,
+      "PayloadOffset": 288266,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.PlasticSCM.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 135
+      "DebugActionIndex": 136
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.PlasticSCM.Editor.rsp",
       "DisplayName": "Writing Unity.PlasticSCM.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 287147,
-      "PayloadLength": 64265,
+      "PayloadOffset": 288413,
+      "PayloadLength": 64390,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.PlasticSCM.Editor.rsp"
       ],
-      "DebugActionIndex": 136
+      "DebugActionIndex": 137
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.PlasticSCM.Editor.rsp2",
       "DisplayName": "Writing Unity.PlasticSCM.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 351507,
+      "PayloadOffset": 352898,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.PlasticSCM.Editor.rsp2"
       ],
-      "DebugActionIndex": 137
+      "DebugActionIndex": 138
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.PlasticSCM.Editor.dll (+2 others)",
@@ -5602,6 +5637,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -6052,17 +6088,17 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        135,
+        94,
+        106,
+        118,
         136,
         137,
-        140
+        138,
+        141
       ],
       "ToUseDependencies": [
-        135,
-        137
+        136,
+        138
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.PlasticSCM.Editor.rsp"
@@ -6075,20 +6111,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 138
+      "DebugActionIndex": 139
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.PlasticSCM.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.PlasticSCM.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 351677,
-      "PayloadLength": 7925,
+      "PayloadOffset": 353068,
+      "PayloadLength": 8011,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.PlasticSCM.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 139
+      "DebugActionIndex": 140
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.PlasticSCM.Editor.dll.mvfrm",
@@ -6185,6 +6221,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe",
@@ -6276,60 +6313,61 @@
         85,
         86,
         87,
-        95,
-        106,
+        88,
+        96,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        139
+        120,
+        127,
+        140
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 140
+      "DebugActionIndex": 141
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Rider.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.Rider.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 359711,
+      "PayloadOffset": 361188,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Rider.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 141
+      "DebugActionIndex": 142
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Rider.Editor.rsp",
       "DisplayName": "Writing Unity.Rider.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 359853,
-      "PayloadLength": 35493,
+      "PayloadOffset": 361330,
+      "PayloadLength": 35618,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Rider.Editor.rsp"
       ],
-      "DebugActionIndex": 142
+      "DebugActionIndex": 143
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Rider.Editor.rsp2",
       "DisplayName": "Writing Unity.Rider.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 395436,
+      "PayloadOffset": 397038,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Rider.Editor.rsp2"
       ],
-      "DebugActionIndex": 143
+      "DebugActionIndex": 144
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.Rider.Editor.dll (+2 others)",
@@ -6422,6 +6460,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -6605,17 +6644,17 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        141,
+        94,
+        106,
+        118,
         142,
         143,
-        146
+        144,
+        147
       ],
       "ToUseDependencies": [
-        141,
-        143
+        142,
+        144
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Rider.Editor.rsp"
@@ -6628,20 +6667,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 144
+      "DebugActionIndex": 145
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Rider.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.Rider.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 395601,
-      "PayloadLength": 7838,
+      "PayloadOffset": 397203,
+      "PayloadLength": 7924,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Rider.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 145
+      "DebugActionIndex": 146
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.Rider.Editor.dll.mvfrm",
@@ -6738,6 +6777,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe",
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Rider.Editor.dll.mvfrm.rsp"
@@ -6828,59 +6868,60 @@
         85,
         86,
         87,
-        106,
+        88,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        145
+        120,
+        127,
+        146
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 146
+      "DebugActionIndex": 147
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Settings.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.Settings.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 403551,
+      "PayloadOffset": 405239,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Settings.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 147
+      "DebugActionIndex": 148
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Settings.Editor.rsp",
       "DisplayName": "Writing Unity.Settings.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 403696,
-      "PayloadLength": 33838,
+      "PayloadOffset": 405384,
+      "PayloadLength": 33963,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Settings.Editor.rsp"
       ],
-      "DebugActionIndex": 148
+      "DebugActionIndex": 149
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Settings.Editor.rsp2",
       "DisplayName": "Writing Unity.Settings.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 437627,
+      "PayloadOffset": 439440,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Settings.Editor.rsp2"
       ],
-      "DebugActionIndex": 149
+      "DebugActionIndex": 150
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.Settings.Editor.dll (+2 others)",
@@ -6973,6 +7014,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -7137,17 +7179,17 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        147,
+        94,
+        106,
+        118,
         148,
         149,
-        152
+        150,
+        153
       ],
       "ToUseDependencies": [
-        147,
-        149
+        148,
+        150
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Settings.Editor.rsp"
@@ -7160,20 +7202,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 150
+      "DebugActionIndex": 151
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Settings.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.Settings.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 437795,
-      "PayloadLength": 8376,
+      "PayloadOffset": 439608,
+      "PayloadLength": 8462,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Settings.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 151
+      "DebugActionIndex": 152
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.Settings.Editor.dll.mvfrm",
@@ -7270,6 +7312,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -7366,65 +7409,66 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        151
+        120,
+        127,
+        152
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 152
+      "DebugActionIndex": 153
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 446313,
+      "PayloadOffset": 448212,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 153
+      "DebugActionIndex": 154
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.rsp",
       "DisplayName": "Writing Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 446488,
-      "PayloadLength": 34597,
+      "PayloadOffset": 448387,
+      "PayloadLength": 34722,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.rsp"
       ],
-      "DebugActionIndex": 154
+      "DebugActionIndex": 155
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.rsp2",
       "DisplayName": "Writing Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 481208,
+      "PayloadOffset": 483232,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.rsp2"
       ],
-      "DebugActionIndex": 155
+      "DebugActionIndex": 156
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll (+2 others)",
@@ -7517,6 +7561,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -7683,17 +7728,17 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        153,
+        94,
+        106,
+        118,
         154,
         155,
-        158
+        156,
+        159
       ],
       "ToUseDependencies": [
-        153,
-        155
+        154,
+        156
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.rsp"
@@ -7706,20 +7751,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 156
+      "DebugActionIndex": 157
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 481406,
-      "PayloadLength": 8376,
+      "PayloadOffset": 483430,
+      "PayloadLength": 8462,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 157
+      "DebugActionIndex": 158
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll.mvfrm",
@@ -7816,6 +7861,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -7912,65 +7958,66 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        157
+        120,
+        127,
+        158
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 158
+      "DebugActionIndex": 159
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 489934,
+      "PayloadOffset": 492044,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 159
+      "DebugActionIndex": 160
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.rsp",
       "DisplayName": "Writing Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 490119,
-      "PayloadLength": 33381,
+      "PayloadOffset": 492229,
+      "PayloadLength": 33506,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.rsp"
       ],
-      "DebugActionIndex": 160
+      "DebugActionIndex": 161
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.rsp2",
       "DisplayName": "Writing Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 523633,
+      "PayloadOffset": 525868,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.rsp2"
       ],
-      "DebugActionIndex": 161
+      "DebugActionIndex": 162
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll (+2 others)",
@@ -8063,6 +8110,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -8218,17 +8266,17 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        159,
+        94,
+        106,
+        118,
         160,
         161,
-        164
+        162,
+        165
       ],
       "ToUseDependencies": [
-        159,
-        161
+        160,
+        162
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.rsp"
@@ -8241,20 +8289,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 162
+      "DebugActionIndex": 163
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 523841,
-      "PayloadLength": 8376,
+      "PayloadOffset": 526076,
+      "PayloadLength": 8462,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 163
+      "DebugActionIndex": 164
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll.mvfrm",
@@ -8351,6 +8399,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -8447,65 +8496,66 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        163
+        120,
+        127,
+        164
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 164
+      "DebugActionIndex": 165
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.TextMeshPro.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 532325,
+      "PayloadOffset": 534646,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 165
+      "DebugActionIndex": 166
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.rsp",
       "DisplayName": "Writing Unity.TextMeshPro.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 532466,
-      "PayloadLength": 36183,
+      "PayloadOffset": 534787,
+      "PayloadLength": 36308,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.rsp"
       ],
-      "DebugActionIndex": 166
+      "DebugActionIndex": 167
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.rsp2",
       "DisplayName": "Writing Unity.TextMeshPro.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 568738,
+      "PayloadOffset": 571184,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.rsp2"
       ],
-      "DebugActionIndex": 167
+      "DebugActionIndex": 168
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.dll (+2 others)",
@@ -8715,6 +8765,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/log4netPlastic.dll",
         "Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll",
@@ -8796,16 +8847,16 @@
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.ref.dll"
       ],
       "ToBuildDependencies": [
-        93,
-        117,
-        165,
+        94,
+        118,
         166,
         167,
-        170
+        168,
+        171
       ],
       "ToUseDependencies": [
-        165,
-        167
+        166,
+        168
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.rsp"
@@ -8818,20 +8869,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 168
+      "DebugActionIndex": 169
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.TextMeshPro.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 568902,
-      "PayloadLength": 7777,
+      "PayloadOffset": 571348,
+      "PayloadLength": 7863,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 169
+      "DebugActionIndex": 170
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.dll.mvfrm",
@@ -8921,6 +8972,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -9017,58 +9069,59 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        119,
-        126,
-        169
+        100,
+        120,
+        127,
+        170
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 170
+      "DebugActionIndex": 171
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.Timeline.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 576784,
+      "PayloadOffset": 579316,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 171
+      "DebugActionIndex": 172
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.rsp",
       "DisplayName": "Writing Unity.Timeline.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 576922,
-      "PayloadLength": 37252,
+      "PayloadOffset": 579454,
+      "PayloadLength": 37377,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.rsp"
       ],
-      "DebugActionIndex": 172
+      "DebugActionIndex": 173
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.rsp2",
       "DisplayName": "Writing Unity.Timeline.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 614260,
+      "PayloadOffset": 616917,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.rsp2"
       ],
-      "DebugActionIndex": 173
+      "DebugActionIndex": 174
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.dll (+2 others)",
@@ -9278,6 +9331,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/log4netPlastic.dll",
         "Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll",
@@ -9373,16 +9427,16 @@
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.ref.dll"
       ],
       "ToBuildDependencies": [
-        93,
-        117,
-        171,
+        94,
+        118,
         172,
         173,
-        176
+        174,
+        177
       ],
       "ToUseDependencies": [
-        171,
-        173
+        172,
+        174
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.rsp"
@@ -9395,20 +9449,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 174
+      "DebugActionIndex": 175
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.Timeline.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 614421,
-      "PayloadLength": 7777,
+      "PayloadOffset": 617078,
+      "PayloadLength": 7863,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 175
+      "DebugActionIndex": 176
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.dll.mvfrm",
@@ -9498,6 +9552,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -9594,58 +9649,59 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        119,
-        126,
-        175
+        100,
+        120,
+        127,
+        176
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 176
+      "DebugActionIndex": 177
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.VSCode.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 622308,
+      "PayloadOffset": 625051,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 177
+      "DebugActionIndex": 178
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.rsp",
       "DisplayName": "Writing Unity.VSCode.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 622451,
-      "PayloadLength": 33491,
+      "PayloadOffset": 625194,
+      "PayloadLength": 33616,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.rsp"
       ],
-      "DebugActionIndex": 178
+      "DebugActionIndex": 179
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.rsp2",
       "DisplayName": "Writing Unity.VSCode.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 656033,
+      "PayloadOffset": 658901,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.rsp2"
       ],
-      "DebugActionIndex": 179
+      "DebugActionIndex": 180
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.dll (+2 others)",
@@ -9738,6 +9794,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -9897,17 +9954,17 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        177,
+        94,
+        106,
+        118,
         178,
         179,
-        182
+        180,
+        183
       ],
       "ToUseDependencies": [
-        177,
-        179
+        178,
+        180
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.rsp"
@@ -9920,20 +9977,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 180
+      "DebugActionIndex": 181
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.VSCode.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 656199,
-      "PayloadLength": 8376,
+      "PayloadOffset": 659067,
+      "PayloadLength": 8462,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 181
+      "DebugActionIndex": 182
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.dll.mvfrm",
@@ -10030,6 +10087,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -10126,65 +10184,66 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        181
+        120,
+        127,
+        182
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 182
+      "DebugActionIndex": 183
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.VisualScripting.Core.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 664692,
+      "PayloadOffset": 667646,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 183
+      "DebugActionIndex": 184
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.rsp",
       "DisplayName": "Writing Unity.VisualScripting.Core.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 664842,
-      "PayloadLength": 84747,
+      "PayloadOffset": 667796,
+      "PayloadLength": 84872,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.rsp"
       ],
-      "DebugActionIndex": 184
+      "DebugActionIndex": 185
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.rsp2",
       "DisplayName": "Writing Unity.VisualScripting.Core.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 749687,
+      "PayloadOffset": 752766,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.rsp2"
       ],
-      "DebugActionIndex": 185
+      "DebugActionIndex": 186
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.dll (+2 others)",
@@ -10394,6 +10453,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/log4netPlastic.dll",
         "Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll",
@@ -10845,16 +10905,16 @@
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.ref.dll"
       ],
       "ToBuildDependencies": [
-        93,
-        117,
-        183,
+        94,
+        118,
         184,
         185,
-        188
+        186,
+        189
       ],
       "ToUseDependencies": [
-        183,
-        185
+        184,
+        186
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.rsp"
@@ -10867,20 +10927,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 186
+      "DebugActionIndex": 187
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.VisualScripting.Core.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 749860,
-      "PayloadLength": 7777,
+      "PayloadOffset": 752939,
+      "PayloadLength": 7863,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 187
+      "DebugActionIndex": 188
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.dll.mvfrm",
@@ -10970,6 +11030,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -11066,58 +11127,59 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        119,
-        126,
-        187
+        100,
+        120,
+        127,
+        188
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 188
+      "DebugActionIndex": 189
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualStudio.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.VisualStudio.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 757753,
+      "PayloadOffset": 760918,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualStudio.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 189
+      "DebugActionIndex": 190
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualStudio.Editor.rsp",
       "DisplayName": "Writing Unity.VisualStudio.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 757902,
-      "PayloadLength": 35776,
+      "PayloadOffset": 761067,
+      "PayloadLength": 35901,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualStudio.Editor.rsp"
       ],
-      "DebugActionIndex": 190
+      "DebugActionIndex": 191
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualStudio.Editor.rsp2",
       "DisplayName": "Writing Unity.VisualStudio.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 793775,
+      "PayloadOffset": 797065,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualStudio.Editor.rsp2"
       ],
-      "DebugActionIndex": 191
+      "DebugActionIndex": 192
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.VisualStudio.Editor.dll (+2 others)",
@@ -11210,6 +11272,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -11398,17 +11461,17 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        189,
+        94,
+        106,
+        118,
         190,
         191,
-        194
+        192,
+        195
       ],
       "ToUseDependencies": [
-        189,
-        191
+        190,
+        192
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualStudio.Editor.rsp"
@@ -11421,20 +11484,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 192
+      "DebugActionIndex": 193
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualStudio.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.VisualStudio.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 793947,
-      "PayloadLength": 7838,
+      "PayloadOffset": 797237,
+      "PayloadLength": 7924,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualStudio.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 193
+      "DebugActionIndex": 194
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.VisualStudio.Editor.dll.mvfrm",
@@ -11531,6 +11594,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe",
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualStudio.Editor.dll.mvfrm.rsp"
@@ -11621,59 +11685,60 @@
         85,
         86,
         87,
-        106,
+        88,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        193
+        120,
+        127,
+        194
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 194
+      "DebugActionIndex": 195
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.CollabProxy.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.CollabProxy.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 801900,
+      "PayloadOffset": 805276,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.CollabProxy.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 195
+      "DebugActionIndex": 196
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.CollabProxy.Editor.rsp",
       "DisplayName": "Writing Unity.CollabProxy.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 802048,
-      "PayloadLength": 32928,
+      "PayloadOffset": 805424,
+      "PayloadLength": 33053,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.CollabProxy.Editor.rsp"
       ],
-      "DebugActionIndex": 196
+      "DebugActionIndex": 197
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.CollabProxy.Editor.rsp2",
       "DisplayName": "Writing Unity.CollabProxy.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 835072,
+      "PayloadOffset": 838573,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.CollabProxy.Editor.rsp2"
       ],
-      "DebugActionIndex": 197
+      "DebugActionIndex": 198
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.CollabProxy.Editor.dll (+2 others)",
@@ -11766,6 +11831,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -11919,18 +11985,18 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        138,
-        195,
+        94,
+        106,
+        118,
+        139,
         196,
         197,
-        201
+        198,
+        202
       ],
       "ToUseDependencies": [
-        195,
-        197
+        196,
+        198
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.CollabProxy.Editor.rsp"
@@ -11943,7 +12009,7 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 198
+      "DebugActionIndex": 199
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.PlasticSCM.Editor.ref.dll_9B6D9940AFF80C3C.mvfrm",
@@ -11957,24 +12023,24 @@
         "Library/Bee/artifacts/mvdfrm/Unity.PlasticSCM.Editor.ref.dll_9B6D9940AFF80C3C.mvfrm"
       ],
       "ToBuildDependencies": [
-        138
+        139
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 199
+      "DebugActionIndex": 200
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.CollabProxy.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.CollabProxy.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 835243,
-      "PayloadLength": 8461,
+      "PayloadOffset": 838744,
+      "PayloadLength": 8547,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.CollabProxy.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 200
+      "DebugActionIndex": 201
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.CollabProxy.Editor.dll.mvfrm",
@@ -12072,6 +12138,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -12168,66 +12235,67 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        199,
-        200
+        120,
+        127,
+        200,
+        201
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 201
+      "DebugActionIndex": 202
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.TestTools.CodeCoverage.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 843830,
+      "PayloadOffset": 847417,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 202
+      "DebugActionIndex": 203
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.rsp",
       "DisplayName": "Writing Unity.TestTools.CodeCoverage.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 843989,
-      "PayloadLength": 37131,
+      "PayloadOffset": 847576,
+      "PayloadLength": 37256,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.rsp"
       ],
-      "DebugActionIndex": 203
+      "DebugActionIndex": 204
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.rsp2",
       "DisplayName": "Writing Unity.TestTools.CodeCoverage.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 881227,
+      "PayloadOffset": 884939,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.rsp2"
       ],
-      "DebugActionIndex": 204
+      "DebugActionIndex": 205
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.dll (+2 others)",
@@ -12320,6 +12388,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -12515,20 +12584,20 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        150,
-        156,
-        162,
-        202,
+        94,
+        106,
+        118,
+        151,
+        157,
+        163,
         203,
         204,
-        210
+        205,
+        211
       ],
       "ToUseDependencies": [
-        202,
-        204
+        203,
+        205
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.rsp"
@@ -12541,7 +12610,7 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 205
+      "DebugActionIndex": 206
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.Settings.Editor.ref.dll_77A5373D6A1F93D6.mvfrm",
@@ -12555,11 +12624,11 @@
         "Library/Bee/artifacts/mvdfrm/Unity.Settings.Editor.ref.dll_77A5373D6A1F93D6.mvfrm"
       ],
       "ToBuildDependencies": [
-        150
+        151
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 206
+      "DebugActionIndex": 207
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.ref.dll_A9B4CA1AA14E26F9.mvfrm",
@@ -12573,11 +12642,11 @@
         "Library/Bee/artifacts/mvdfrm/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.ref.dll_A9B4CA1AA14E26F9.mvfrm"
       ],
       "ToBuildDependencies": [
-        156
+        157
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 207
+      "DebugActionIndex": 208
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.ref.dll_C83781DD64A29266.mvfrm",
@@ -12591,24 +12660,24 @@
         "Library/Bee/artifacts/mvdfrm/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.ref.dll_C83781DD64A29266.mvfrm"
       ],
       "ToBuildDependencies": [
-        162
+        163
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 208
+      "DebugActionIndex": 209
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.TestTools.CodeCoverage.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 881409,
-      "PayloadLength": 8157,
+      "PayloadOffset": 885121,
+      "PayloadLength": 8243,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 209
+      "DebugActionIndex": 210
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.dll.mvfrm",
@@ -12708,6 +12777,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe",
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TestTools.CodeCoverage.Editor.dll.mvfrm.rsp"
@@ -12798,62 +12868,63 @@
         85,
         86,
         87,
-        106,
+        88,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        206,
+        120,
+        127,
         207,
         208,
-        209
+        209,
+        210
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 210
+      "DebugActionIndex": 211
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.TextMeshPro.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 889681,
+      "PayloadOffset": 893479,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 211
+      "DebugActionIndex": 212
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.Editor.rsp",
       "DisplayName": "Writing Unity.TextMeshPro.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 889829,
-      "PayloadLength": 37245,
+      "PayloadOffset": 893627,
+      "PayloadLength": 37370,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.Editor.rsp"
       ],
-      "DebugActionIndex": 212
+      "DebugActionIndex": 213
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.Editor.rsp2",
       "DisplayName": "Writing Unity.TextMeshPro.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 927170,
+      "PayloadOffset": 931093,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.Editor.rsp2"
       ],
-      "DebugActionIndex": 213
+      "DebugActionIndex": 214
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.Editor.dll (+2 others)",
@@ -12946,6 +13017,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -13146,18 +13218,18 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        168,
-        211,
+        94,
+        106,
+        118,
+        169,
         212,
         213,
-        217
+        214,
+        218
       ],
       "ToUseDependencies": [
-        211,
-        213
+        212,
+        214
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.Editor.rsp"
@@ -13170,7 +13242,7 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 214
+      "DebugActionIndex": 215
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.TextMeshPro.ref.dll_3701448EC0EF5C81.mvfrm",
@@ -13184,24 +13256,24 @@
         "Library/Bee/artifacts/mvdfrm/Unity.TextMeshPro.ref.dll_3701448EC0EF5C81.mvfrm"
       ],
       "ToBuildDependencies": [
-        168
+        169
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 215
+      "DebugActionIndex": 216
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.TextMeshPro.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 927341,
-      "PayloadLength": 8455,
+      "PayloadOffset": 931264,
+      "PayloadLength": 8541,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 216
+      "DebugActionIndex": 217
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.TextMeshPro.Editor.dll.mvfrm",
@@ -13299,6 +13371,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -13395,66 +13468,67 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        215,
-        216
+        120,
+        127,
+        216,
+        217
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 217
+      "DebugActionIndex": 218
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.Timeline.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 935908,
+      "PayloadOffset": 939917,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 218
+      "DebugActionIndex": 219
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.Editor.rsp",
       "DisplayName": "Writing Unity.Timeline.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 936053,
-      "PayloadLength": 56860,
+      "PayloadOffset": 940062,
+      "PayloadLength": 56985,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.Editor.rsp"
       ],
-      "DebugActionIndex": 219
+      "DebugActionIndex": 220
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.Editor.rsp2",
       "DisplayName": "Writing Unity.Timeline.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 993006,
+      "PayloadOffset": 997140,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.Editor.rsp2"
       ],
-      "DebugActionIndex": 220
+      "DebugActionIndex": 221
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.Editor.dll (+2 others)",
@@ -13547,6 +13621,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -13971,18 +14046,18 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        174,
-        218,
+        94,
+        106,
+        118,
+        175,
         219,
         220,
-        224
+        221,
+        225
       ],
       "ToUseDependencies": [
-        218,
-        220
+        219,
+        221
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.Editor.rsp"
@@ -13995,7 +14070,7 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 221
+      "DebugActionIndex": 222
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.Timeline.ref.dll_D34675E5055C5209.mvfrm",
@@ -14009,24 +14084,24 @@
         "Library/Bee/artifacts/mvdfrm/Unity.Timeline.ref.dll_D34675E5055C5209.mvfrm"
       ],
       "ToBuildDependencies": [
-        174
+        175
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 222
+      "DebugActionIndex": 223
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.Timeline.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 993174,
-      "PayloadLength": 8452,
+      "PayloadOffset": 997308,
+      "PayloadLength": 8538,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 223
+      "DebugActionIndex": 224
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.Timeline.Editor.dll.mvfrm",
@@ -14124,6 +14199,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -14220,66 +14296,67 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        222,
-        223
+        120,
+        127,
+        223,
+        224
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 224
+      "DebugActionIndex": 225
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.VisualScripting.Core.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1001750,
+      "PayloadOffset": 1005970,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 225
+      "DebugActionIndex": 226
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.Editor.rsp",
       "DisplayName": "Writing Unity.VisualScripting.Core.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1001907,
-      "PayloadLength": 89328,
+      "PayloadOffset": 1006127,
+      "PayloadLength": 89453,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.Editor.rsp"
       ],
-      "DebugActionIndex": 226
+      "DebugActionIndex": 227
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.Editor.rsp2",
       "DisplayName": "Writing Unity.VisualScripting.Core.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1091340,
+      "PayloadOffset": 1095685,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.Editor.rsp2"
       ],
-      "DebugActionIndex": 227
+      "DebugActionIndex": 228
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.Editor.dll (+2 others)",
@@ -14372,6 +14449,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -14994,18 +15072,18 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        186,
-        225,
+        94,
+        106,
+        118,
+        187,
         226,
         227,
-        231
+        228,
+        232
       ],
       "ToUseDependencies": [
-        225,
-        227
+        226,
+        228
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.Editor.rsp"
@@ -15018,7 +15096,7 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 228
+      "DebugActionIndex": 229
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.Core.ref.dll_EA71DBF61AC412EE.mvfrm",
@@ -15032,24 +15110,24 @@
         "Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.Core.ref.dll_EA71DBF61AC412EE.mvfrm"
       ],
       "ToBuildDependencies": [
-        186
+        187
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 229
+      "DebugActionIndex": 230
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.VisualScripting.Core.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1091520,
-      "PayloadLength": 8464,
+      "PayloadOffset": 1095865,
+      "PayloadLength": 8550,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 230
+      "DebugActionIndex": 231
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Core.Editor.dll.mvfrm",
@@ -15147,6 +15225,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -15243,66 +15322,67 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        229,
-        230
+        120,
+        127,
+        230,
+        231
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 231
+      "DebugActionIndex": 232
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.VisualScripting.Flow.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1100101,
+      "PayloadOffset": 1104532,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 232
+      "DebugActionIndex": 233
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.rsp",
       "DisplayName": "Writing Unity.VisualScripting.Flow.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1100251,
-      "PayloadLength": 80050,
+      "PayloadOffset": 1104682,
+      "PayloadLength": 80175,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.rsp"
       ],
-      "DebugActionIndex": 233
+      "DebugActionIndex": 234
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.rsp2",
       "DisplayName": "Writing Unity.VisualScripting.Flow.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1180399,
+      "PayloadOffset": 1184955,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.rsp2"
       ],
-      "DebugActionIndex": 234
+      "DebugActionIndex": 235
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.dll (+2 others)",
@@ -15512,6 +15592,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/log4netPlastic.dll",
         "Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll",
@@ -15937,17 +16018,17 @@
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.ref.dll"
       ],
       "ToBuildDependencies": [
-        93,
-        117,
-        186,
-        232,
+        94,
+        118,
+        187,
         233,
         234,
-        237
+        235,
+        238
       ],
       "ToUseDependencies": [
-        232,
-        234
+        233,
+        235
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.rsp"
@@ -15960,20 +16041,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 235
+      "DebugActionIndex": 236
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.VisualScripting.Flow.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1180572,
-      "PayloadLength": 7865,
+      "PayloadOffset": 1185128,
+      "PayloadLength": 7951,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 236
+      "DebugActionIndex": 237
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.dll.mvfrm",
@@ -16064,6 +16145,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -16160,59 +16242,60 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        119,
-        126,
-        229,
-        236
+        100,
+        120,
+        127,
+        230,
+        237
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 237
+      "DebugActionIndex": 238
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.VisualScripting.Flow.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1188561,
+      "PayloadOffset": 1193203,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 238
+      "DebugActionIndex": 239
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.Editor.rsp",
       "DisplayName": "Writing Unity.VisualScripting.Flow.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1188718,
-      "PayloadLength": 53186,
+      "PayloadOffset": 1193360,
+      "PayloadLength": 53311,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.Editor.rsp"
       ],
-      "DebugActionIndex": 239
+      "DebugActionIndex": 240
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.Editor.rsp2",
       "DisplayName": "Writing Unity.VisualScripting.Flow.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1242009,
+      "PayloadOffset": 1246776,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.Editor.rsp2"
       ],
-      "DebugActionIndex": 240
+      "DebugActionIndex": 241
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.Editor.dll (+2 others)",
@@ -16305,6 +16388,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -16628,20 +16712,20 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        186,
-        228,
-        235,
-        238,
+        94,
+        106,
+        118,
+        187,
+        229,
+        236,
         239,
         240,
-        245
+        241,
+        246
       ],
       "ToUseDependencies": [
-        238,
-        240
+        239,
+        241
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.Editor.rsp"
@@ -16654,7 +16738,7 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 241
+      "DebugActionIndex": 242
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.Core.Editor.ref.dll_83BC621B72BABDA3.mvfrm",
@@ -16668,11 +16752,11 @@
         "Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.Core.Editor.ref.dll_83BC621B72BABDA3.mvfrm"
       ],
       "ToBuildDependencies": [
-        228
+        229
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 242
+      "DebugActionIndex": 243
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.Flow.ref.dll_3182BC4C9CCD879D.mvfrm",
@@ -16686,24 +16770,24 @@
         "Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.Flow.ref.dll_3182BC4C9CCD879D.mvfrm"
       ],
       "ToBuildDependencies": [
-        235
+        236
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 243
+      "DebugActionIndex": 244
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.VisualScripting.Flow.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1242189,
-      "PayloadLength": 8647,
+      "PayloadOffset": 1246956,
+      "PayloadLength": 8733,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 244
+      "DebugActionIndex": 245
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Flow.Editor.dll.mvfrm",
@@ -16803,6 +16887,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -16899,68 +16984,69 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        229,
-        242,
+        120,
+        127,
+        230,
         243,
-        244
+        244,
+        245
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 245
+      "DebugActionIndex": 246
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.VisualScripting.State.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1250954,
+      "PayloadOffset": 1255807,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 246
+      "DebugActionIndex": 247
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.rsp",
       "DisplayName": "Writing Unity.VisualScripting.State.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1251105,
-      "PayloadLength": 34429,
+      "PayloadOffset": 1255958,
+      "PayloadLength": 34554,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.rsp"
       ],
-      "DebugActionIndex": 247
+      "DebugActionIndex": 248
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.rsp2",
       "DisplayName": "Writing Unity.VisualScripting.State.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1285633,
+      "PayloadOffset": 1290611,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.rsp2"
       ],
-      "DebugActionIndex": 248
+      "DebugActionIndex": 249
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.dll (+2 others)",
@@ -17170,6 +17256,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/log4netPlastic.dll",
         "Library/PackageCache/com.unity.collab-proxy@2.3.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll",
@@ -17225,18 +17312,18 @@
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.ref.dll"
       ],
       "ToBuildDependencies": [
-        93,
-        117,
-        186,
-        235,
-        246,
+        94,
+        118,
+        187,
+        236,
         247,
         248,
-        251
+        249,
+        252
       ],
       "ToUseDependencies": [
-        246,
-        248
+        247,
+        249
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.rsp"
@@ -17249,20 +17336,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 249
+      "DebugActionIndex": 250
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.VisualScripting.State.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1285807,
-      "PayloadLength": 7953,
+      "PayloadOffset": 1290785,
+      "PayloadLength": 8039,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 250
+      "DebugActionIndex": 251
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.dll.mvfrm",
@@ -17354,6 +17441,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -17450,60 +17538,61 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        119,
-        126,
-        229,
-        243,
-        250
+        100,
+        120,
+        127,
+        230,
+        244,
+        251
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 251
+      "DebugActionIndex": 252
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.VisualScripting.SettingsProvider.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1293896,
+      "PayloadOffset": 1298960,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 252
+      "DebugActionIndex": 253
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.rsp",
       "DisplayName": "Writing Unity.VisualScripting.SettingsProvider.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1294065,
-      "PayloadLength": 34391,
+      "PayloadOffset": 1299129,
+      "PayloadLength": 34516,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.rsp"
       ],
-      "DebugActionIndex": 253
+      "DebugActionIndex": 254
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.rsp2",
       "DisplayName": "Writing Unity.VisualScripting.SettingsProvider.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1328573,
+      "PayloadOffset": 1333762,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.rsp2"
       ],
-      "DebugActionIndex": 254
+      "DebugActionIndex": 255
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.dll (+2 others)",
@@ -17596,6 +17685,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -17762,22 +17852,22 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        186,
-        228,
-        235,
-        241,
-        249,
-        252,
+        94,
+        106,
+        118,
+        187,
+        229,
+        236,
+        242,
+        250,
         253,
         254,
-        259
+        255,
+        260
       ],
       "ToUseDependencies": [
-        252,
-        254
+        253,
+        255
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.rsp"
@@ -17790,7 +17880,7 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 255
+      "DebugActionIndex": 256
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.Flow.Editor.ref.dll_00ED4ACA819948E4.mvfrm",
@@ -17804,11 +17894,11 @@
         "Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.Flow.Editor.ref.dll_00ED4ACA819948E4.mvfrm"
       ],
       "ToBuildDependencies": [
-        241
+        242
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 256
+      "DebugActionIndex": 257
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.State.ref.dll_255AEA40301341C8.mvfrm",
@@ -17822,24 +17912,24 @@
         "Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.State.ref.dll_255AEA40301341C8.mvfrm"
       ],
       "ToBuildDependencies": [
-        249
+        250
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 257
+      "DebugActionIndex": 258
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.VisualScripting.SettingsProvider.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1328765,
-      "PayloadLength": 8831,
+      "PayloadOffset": 1333954,
+      "PayloadLength": 8917,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 258
+      "DebugActionIndex": 259
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.dll.mvfrm",
@@ -17941,6 +18031,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -18037,70 +18128,71 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        229,
-        242,
+        120,
+        127,
+        230,
         243,
-        256,
+        244,
         257,
-        258
+        258,
+        259
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 259
+      "DebugActionIndex": 260
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.VisualScripting.State.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1337721,
+      "PayloadOffset": 1342996,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 260
+      "DebugActionIndex": 261
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.Editor.rsp",
       "DisplayName": "Writing Unity.VisualScripting.State.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1337879,
-      "PayloadLength": 41160,
+      "PayloadOffset": 1343154,
+      "PayloadLength": 41285,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.Editor.rsp"
       ],
-      "DebugActionIndex": 261
+      "DebugActionIndex": 262
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.Editor.rsp2",
       "DisplayName": "Writing Unity.VisualScripting.State.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1379145,
+      "PayloadOffset": 1384545,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.Editor.rsp2"
       ],
-      "DebugActionIndex": 262
+      "DebugActionIndex": 263
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.Editor.dll (+2 others)",
@@ -18193,6 +18285,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -18417,22 +18510,22 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        186,
-        228,
-        235,
-        241,
-        249,
-        260,
+        94,
+        106,
+        118,
+        187,
+        229,
+        236,
+        242,
+        250,
         261,
         262,
-        265
+        263,
+        266
       ],
       "ToUseDependencies": [
-        260,
-        262
+        261,
+        263
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.Editor.rsp"
@@ -18445,20 +18538,20 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 263
+      "DebugActionIndex": 264
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.VisualScripting.State.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1379326,
-      "PayloadLength": 8831,
+      "PayloadOffset": 1384726,
+      "PayloadLength": 8917,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 264
+      "DebugActionIndex": 265
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.State.Editor.dll.mvfrm",
@@ -18560,6 +18653,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -18656,70 +18750,71 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        229,
-        242,
+        120,
+        127,
+        230,
         243,
-        256,
+        244,
         257,
-        264
+        258,
+        265
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 265
+      "DebugActionIndex": 266
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Shared.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.VisualScripting.Shared.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1388283,
+      "PayloadOffset": 1393769,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\ryoro\\Work\\_25\\bene_g",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Shared.Editor.UnityAdditionalFile.txt"
       ],
-      "DebugActionIndex": 266
+      "DebugActionIndex": 267
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Shared.Editor.rsp",
       "DisplayName": "Writing Unity.VisualScripting.Shared.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1388442,
-      "PayloadLength": 33372,
+      "PayloadOffset": 1393928,
+      "PayloadLength": 33497,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Shared.Editor.rsp"
       ],
-      "DebugActionIndex": 267
+      "DebugActionIndex": 268
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Shared.Editor.rsp2",
       "DisplayName": "Writing Unity.VisualScripting.Shared.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1421921,
+      "PayloadOffset": 1427532,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\ryoro\\Work\\",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Shared.Editor.rsp2"
       ],
-      "DebugActionIndex": 268
+      "DebugActionIndex": 269
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Shared.Editor.dll (+2 others)",
@@ -18812,6 +18907,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll",
+        "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll",
@@ -18970,23 +19066,23 @@
       ],
       "ToBuildDependencies": [
         4,
-        93,
-        105,
-        117,
-        186,
-        228,
-        235,
-        241,
-        249,
-        263,
-        266,
+        94,
+        106,
+        118,
+        187,
+        229,
+        236,
+        242,
+        250,
+        264,
         267,
         268,
-        272
+        269,
+        273
       ],
       "ToUseDependencies": [
-        266,
-        268
+        267,
+        269
       ],
       "FrontendResponseFiles": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Shared.Editor.rsp"
@@ -18999,7 +19095,7 @@
         }
       ],
       "CachingMode": "ByDirectInputs",
-      "DebugActionIndex": 269
+      "DebugActionIndex": 270
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.State.Editor.ref.dll_E0FF03DA7F2CFA69.mvfrm",
@@ -19013,24 +19109,24 @@
         "Library/Bee/artifacts/mvdfrm/Unity.VisualScripting.State.Editor.ref.dll_E0FF03DA7F2CFA69.mvfrm"
       ],
       "ToBuildDependencies": [
-        263
+        264
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 270
+      "DebugActionIndex": 271
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Shared.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.VisualScripting.Shared.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 1422103,
-      "PayloadLength": 8927,
+      "PayloadOffset": 1427714,
+      "PayloadLength": 9013,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Shared.Editor.dll.mvfrm.rsp"
       ],
-      "DebugActionIndex": 271
+      "DebugActionIndex": 272
     },
     {
       "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/2000b0aE.dag/Unity.VisualScripting.Shared.Editor.dll.mvfrm",
@@ -19133,6 +19229,7 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_F7C2FCAB82B87F84.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_092D03A9E4CADEC6.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WebGLModule.dll_04CD314723BFE37F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_D3A6B61B4C2EDFC0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_0BA60476AAE6AAB0.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Antlr3.Runtime.dll_E340043392540AF9.mvfrm",
         "Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_41CE71F42A4FD22C.mvfrm",
@@ -19229,32 +19326,33 @@
         85,
         86,
         87,
-        94,
+        88,
         95,
         96,
         97,
         98,
         99,
-        106,
+        100,
         107,
         108,
         109,
         110,
         111,
-        118,
+        112,
         119,
-        126,
-        229,
-        242,
+        120,
+        127,
+        230,
         243,
-        256,
+        244,
         257,
-        270,
-        271
+        258,
+        271,
+        272
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 272
+      "DebugActionIndex": 273
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/UnityEngine.TestRunner.dll",
@@ -19269,7 +19367,7 @@
       "ToBuildDependencies": [
         4
       ],
-      "DebugActionIndex": 273
+      "DebugActionIndex": 274
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/UnityEngine.TestRunner.pdb",
@@ -19284,7 +19382,7 @@
       "ToBuildDependencies": [
         4
       ],
-      "DebugActionIndex": 274
+      "DebugActionIndex": 275
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/UnityEditor.TestRunner.dll",
@@ -19297,9 +19395,9 @@
         "Library/ScriptAssemblies/UnityEditor.TestRunner.dll"
       ],
       "ToBuildDependencies": [
-        105
+        106
       ],
-      "DebugActionIndex": 275
+      "DebugActionIndex": 276
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/UnityEditor.TestRunner.pdb",
@@ -19312,9 +19410,9 @@
         "Library/ScriptAssemblies/UnityEditor.TestRunner.pdb"
       ],
       "ToBuildDependencies": [
-        105
+        106
       ],
-      "DebugActionIndex": 276
+      "DebugActionIndex": 277
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Rider.Editor.dll",
@@ -19327,9 +19425,9 @@
         "Library/ScriptAssemblies/Unity.Rider.Editor.dll"
       ],
       "ToBuildDependencies": [
-        144
+        145
       ],
-      "DebugActionIndex": 277
+      "DebugActionIndex": 278
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Rider.Editor.pdb",
@@ -19342,9 +19440,9 @@
         "Library/ScriptAssemblies/Unity.Rider.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        144
+        145
       ],
-      "DebugActionIndex": 278
+      "DebugActionIndex": 279
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VSCode.Editor.dll",
@@ -19357,9 +19455,9 @@
         "Library/ScriptAssemblies/Unity.VSCode.Editor.dll"
       ],
       "ToBuildDependencies": [
-        180
+        181
       ],
-      "DebugActionIndex": 279
+      "DebugActionIndex": 280
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VSCode.Editor.pdb",
@@ -19372,9 +19470,9 @@
         "Library/ScriptAssemblies/Unity.VSCode.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        180
+        181
       ],
-      "DebugActionIndex": 280
+      "DebugActionIndex": 281
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll",
@@ -19387,9 +19485,9 @@
         "Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll"
       ],
       "ToBuildDependencies": [
-        192
+        193
       ],
-      "DebugActionIndex": 281
+      "DebugActionIndex": 282
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualStudio.Editor.pdb",
@@ -19402,9 +19500,9 @@
         "Library/ScriptAssemblies/Unity.VisualStudio.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        192
+        193
       ],
-      "DebugActionIndex": 282
+      "DebugActionIndex": 283
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/UnityEngine.UI.dll",
@@ -19417,9 +19515,9 @@
         "Library/ScriptAssemblies/UnityEngine.UI.dll"
       ],
       "ToBuildDependencies": [
-        93
+        94
       ],
-      "DebugActionIndex": 283
+      "DebugActionIndex": 284
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/UnityEngine.UI.pdb",
@@ -19432,9 +19530,9 @@
         "Library/ScriptAssemblies/UnityEngine.UI.pdb"
       ],
       "ToBuildDependencies": [
-        93
+        94
       ],
-      "DebugActionIndex": 284
+      "DebugActionIndex": 285
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/UnityEditor.UI.dll",
@@ -19447,9 +19545,9 @@
         "Library/ScriptAssemblies/UnityEditor.UI.dll"
       ],
       "ToBuildDependencies": [
-        117
+        118
       ],
-      "DebugActionIndex": 285
+      "DebugActionIndex": 286
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/UnityEditor.UI.pdb",
@@ -19462,9 +19560,9 @@
         "Library/ScriptAssemblies/UnityEditor.UI.pdb"
       ],
       "ToBuildDependencies": [
-        117
+        118
       ],
-      "DebugActionIndex": 286
+      "DebugActionIndex": 287
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll",
@@ -19477,9 +19575,9 @@
         "Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll"
       ],
       "ToBuildDependencies": [
-        125
+        126
       ],
-      "DebugActionIndex": 287
+      "DebugActionIndex": 288
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.pdb",
@@ -19492,9 +19590,9 @@
         "Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        125
+        126
       ],
-      "DebugActionIndex": 288
+      "DebugActionIndex": 289
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll",
@@ -19507,9 +19605,9 @@
         "Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll"
       ],
       "ToBuildDependencies": [
-        132
+        133
       ],
-      "DebugActionIndex": 289
+      "DebugActionIndex": 290
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.pdb",
@@ -19522,9 +19620,9 @@
         "Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        132
+        133
       ],
-      "DebugActionIndex": 290
+      "DebugActionIndex": 291
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll",
@@ -19537,9 +19635,9 @@
         "Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll"
       ],
       "ToBuildDependencies": [
-        138
+        139
       ],
-      "DebugActionIndex": 291
+      "DebugActionIndex": 292
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.PlasticSCM.Editor.pdb",
@@ -19552,9 +19650,9 @@
         "Library/ScriptAssemblies/Unity.PlasticSCM.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        138
+        139
       ],
-      "DebugActionIndex": 292
+      "DebugActionIndex": 293
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Settings.Editor.dll",
@@ -19567,9 +19665,9 @@
         "Library/ScriptAssemblies/Unity.Settings.Editor.dll"
       ],
       "ToBuildDependencies": [
-        150
+        151
       ],
-      "DebugActionIndex": 293
+      "DebugActionIndex": 294
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Settings.Editor.pdb",
@@ -19582,9 +19680,9 @@
         "Library/ScriptAssemblies/Unity.Settings.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        150
+        151
       ],
-      "DebugActionIndex": 294
+      "DebugActionIndex": 295
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll",
@@ -19597,9 +19695,9 @@
         "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll"
       ],
       "ToBuildDependencies": [
-        156
+        157
       ],
-      "DebugActionIndex": 295
+      "DebugActionIndex": 296
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.pdb",
@@ -19612,9 +19710,9 @@
         "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.pdb"
       ],
       "ToBuildDependencies": [
-        156
+        157
       ],
-      "DebugActionIndex": 296
+      "DebugActionIndex": 297
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll",
@@ -19627,9 +19725,9 @@
         "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll"
       ],
       "ToBuildDependencies": [
-        162
+        163
       ],
-      "DebugActionIndex": 297
+      "DebugActionIndex": 298
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.pdb",
@@ -19642,9 +19740,9 @@
         "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.pdb"
       ],
       "ToBuildDependencies": [
-        162
+        163
       ],
-      "DebugActionIndex": 298
+      "DebugActionIndex": 299
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.TextMeshPro.dll",
@@ -19657,9 +19755,9 @@
         "Library/ScriptAssemblies/Unity.TextMeshPro.dll"
       ],
       "ToBuildDependencies": [
-        168
+        169
       ],
-      "DebugActionIndex": 299
+      "DebugActionIndex": 300
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.TextMeshPro.pdb",
@@ -19672,9 +19770,9 @@
         "Library/ScriptAssemblies/Unity.TextMeshPro.pdb"
       ],
       "ToBuildDependencies": [
-        168
+        169
       ],
-      "DebugActionIndex": 300
+      "DebugActionIndex": 301
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Timeline.dll",
@@ -19687,9 +19785,9 @@
         "Library/ScriptAssemblies/Unity.Timeline.dll"
       ],
       "ToBuildDependencies": [
-        174
+        175
       ],
-      "DebugActionIndex": 301
+      "DebugActionIndex": 302
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Timeline.pdb",
@@ -19702,9 +19800,9 @@
         "Library/ScriptAssemblies/Unity.Timeline.pdb"
       ],
       "ToBuildDependencies": [
-        174
+        175
       ],
-      "DebugActionIndex": 302
+      "DebugActionIndex": 303
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Core.dll",
@@ -19717,9 +19815,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.Core.dll"
       ],
       "ToBuildDependencies": [
-        186
+        187
       ],
-      "DebugActionIndex": 303
+      "DebugActionIndex": 304
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Core.pdb",
@@ -19732,9 +19830,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.Core.pdb"
       ],
       "ToBuildDependencies": [
-        186
+        187
       ],
-      "DebugActionIndex": 304
+      "DebugActionIndex": 305
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll",
@@ -19747,9 +19845,9 @@
         "Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll"
       ],
       "ToBuildDependencies": [
-        198
+        199
       ],
-      "DebugActionIndex": 305
+      "DebugActionIndex": 306
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.CollabProxy.Editor.pdb",
@@ -19762,9 +19860,9 @@
         "Library/ScriptAssemblies/Unity.CollabProxy.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        198
+        199
       ],
-      "DebugActionIndex": 306
+      "DebugActionIndex": 307
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll",
@@ -19777,9 +19875,9 @@
         "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll"
       ],
       "ToBuildDependencies": [
-        205
+        206
       ],
-      "DebugActionIndex": 307
+      "DebugActionIndex": 308
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.pdb",
@@ -19792,9 +19890,9 @@
         "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        205
+        206
       ],
-      "DebugActionIndex": 308
+      "DebugActionIndex": 309
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll",
@@ -19807,9 +19905,9 @@
         "Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
       ],
       "ToBuildDependencies": [
-        214
+        215
       ],
-      "DebugActionIndex": 309
+      "DebugActionIndex": 310
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.TextMeshPro.Editor.pdb",
@@ -19822,9 +19920,9 @@
         "Library/ScriptAssemblies/Unity.TextMeshPro.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        214
+        215
       ],
-      "DebugActionIndex": 310
+      "DebugActionIndex": 311
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Timeline.Editor.dll",
@@ -19837,9 +19935,9 @@
         "Library/ScriptAssemblies/Unity.Timeline.Editor.dll"
       ],
       "ToBuildDependencies": [
-        221
+        222
       ],
-      "DebugActionIndex": 311
+      "DebugActionIndex": 312
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Timeline.Editor.pdb",
@@ -19852,9 +19950,9 @@
         "Library/ScriptAssemblies/Unity.Timeline.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        221
+        222
       ],
-      "DebugActionIndex": 312
+      "DebugActionIndex": 313
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll",
@@ -19867,9 +19965,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll"
       ],
       "ToBuildDependencies": [
-        228
+        229
       ],
-      "DebugActionIndex": 313
+      "DebugActionIndex": 314
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.pdb",
@@ -19882,9 +19980,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        228
+        229
       ],
-      "DebugActionIndex": 314
+      "DebugActionIndex": 315
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll",
@@ -19897,9 +19995,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll"
       ],
       "ToBuildDependencies": [
-        235
+        236
       ],
-      "DebugActionIndex": 315
+      "DebugActionIndex": 316
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Flow.pdb",
@@ -19912,9 +20010,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.Flow.pdb"
       ],
       "ToBuildDependencies": [
-        235
+        236
       ],
-      "DebugActionIndex": 316
+      "DebugActionIndex": 317
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll",
@@ -19927,9 +20025,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll"
       ],
       "ToBuildDependencies": [
-        241
+        242
       ],
-      "DebugActionIndex": 317
+      "DebugActionIndex": 318
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.pdb",
@@ -19942,9 +20040,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        241
+        242
       ],
-      "DebugActionIndex": 318
+      "DebugActionIndex": 319
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.State.dll",
@@ -19957,9 +20055,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.State.dll"
       ],
       "ToBuildDependencies": [
-        249
+        250
       ],
-      "DebugActionIndex": 319
+      "DebugActionIndex": 320
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.State.pdb",
@@ -19972,9 +20070,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.State.pdb"
       ],
       "ToBuildDependencies": [
-        249
+        250
       ],
-      "DebugActionIndex": 320
+      "DebugActionIndex": 321
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll",
@@ -19987,9 +20085,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll"
       ],
       "ToBuildDependencies": [
-        255
+        256
       ],
-      "DebugActionIndex": 321
+      "DebugActionIndex": 322
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.pdb",
@@ -20002,9 +20100,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        255
+        256
       ],
-      "DebugActionIndex": 322
+      "DebugActionIndex": 323
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll",
@@ -20017,9 +20115,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll"
       ],
       "ToBuildDependencies": [
-        263
+        264
       ],
-      "DebugActionIndex": 323
+      "DebugActionIndex": 324
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.pdb",
@@ -20032,9 +20130,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        263
+        264
       ],
-      "DebugActionIndex": 324
+      "DebugActionIndex": 325
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll",
@@ -20047,9 +20145,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll"
       ],
       "ToBuildDependencies": [
-        269
+        270
       ],
-      "DebugActionIndex": 325
+      "DebugActionIndex": 326
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.pdb",
@@ -20062,9 +20160,9 @@
         "Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.pdb"
       ],
       "ToBuildDependencies": [
-        269
+        270
       ],
-      "DebugActionIndex": 326
+      "DebugActionIndex": 327
     },
     {
       "Annotation": "BuildPlayerDataGenerator Library/BuildPlayerData/Editor/TypeDb-All.json",
@@ -20088,17 +20186,17 @@
         "Library/BuildPlayerData/Editor/TypeDb-All.json"
       ],
       "ToBuildDependencies": [
-        273,
-        283,
-        299,
-        301,
-        303,
-        315,
-        319
+        274,
+        284,
+        300,
+        302,
+        304,
+        316,
+        320
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 327
+      "DebugActionIndex": 328
     },
     {
       "Annotation": "ScriptAssembliesAndTypeDB",
@@ -20107,10 +20205,10 @@
       "Outputs": [],
       "ToBuildDependencies": [
         6,
-        327
+        328
       ],
       "OverwriteOutputs": false,
-      "DebugActionIndex": 328
+      "DebugActionIndex": 329
     }
   ],
   "FileSignatures": [
@@ -20345,7 +20443,7 @@
         "NamedNodes": {
           "all_tundra_nodes": 0,
           "ScriptAssemblies": 6,
-          "ScriptAssembliesAndTypeDB": 328
+          "ScriptAssembliesAndTypeDB": 329
         }
 ,  "DefaultNodes": [
     0
