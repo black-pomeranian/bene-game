@@ -6,6 +6,7 @@ public class ScoreUIManager : MonoBehaviour
     [SerializeField] private Image[] scoreImages; // UIのImage要素の配列
     [SerializeField] private Sprite goal_icon;   // ゴール時のアイコン
     [SerializeField] private Sprite miss_icon;   // ミス時のアイコン
+    [SerializeField] private Sprite inactive_icon;   // ミス時のアイコン
 
 
     private void Start()
@@ -29,6 +30,14 @@ public class ScoreUIManager : MonoBehaviour
         if (IsValidIndex(num))
         {
             scoreImages[num].sprite = miss_icon;
+        }
+    }
+
+    public void ResetScoreBord()
+    {
+        for(int i = 0; i < scoreImages.Length; i++)
+        {
+            scoreImages[i].sprite = inactive_icon;
         }
     }
 
