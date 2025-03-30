@@ -11,9 +11,12 @@ public class Kicker : MonoBehaviour
         WAIT,
         AIM,
         KICK,
+        WATCH,
         GOAL,
         NOGOAL
     }
+
+    [SerializeField] private float watchTime = 5.0f;
 
     // 現在の状態
     private KickerState currentState = KickerState.STANDBY;
@@ -25,20 +28,24 @@ public class Kicker : MonoBehaviour
 
     // 初期位置
     private Vector3 initPosition;
+    private Vector3 initRotation;
 
-    // キック関連のパラメータ
+    // KICK状態用変数    
     private Vector3 aimVector3;
-    /*private bool isTouching = false;*/
     private Vector2 swipeStartPosition;
     private Vector2 swipeEndPosition;
+    private bool isTouchedBall;
 
-    private float currentTimer;
+    // WATCH状態用変数
+    private float watchCurrentTimer;
+    private bool isGoal;
 
     // 初期化
     void Start()
     {
         initPosition = this.transform.position;
-        currentTimer = 0.0f;
+        initRotation = this.transform.eulerAngles;
+        watchCurrentTimer = 0.0f;
         kickAnimController = FindObjectOfType<KickAnimController>();
         ball = FindObjectOfType<Ball>();
         /*referee = FindObjectOfType<Referee>();*/
@@ -64,6 +71,9 @@ public class Kicker : MonoBehaviour
                 break;
             case KickerState.KICK:
                 UpdateKickState();
+                break;
+            case KickerState.WATCH:
+                UpdateWatchState();
                 break;
             case KickerState.GOAL:
                 UpdateGoalState();
@@ -98,7 +108,13 @@ public class Kicker : MonoBehaviour
             case KickerState.WAIT:
                 // パラメータの初期化
                 this.transform.position = initPosition;
+                this.transform.eulerAngles = initRotation;
+                ball.Initialize();
+                isTouchedBall = false;
+                isGoal = false;
                 aimVector3 = Vector3.zero;
+                kickAnimController.StopKick();
+                Debug.Log("Enter Wait state");
                 break;
             case KickerState.AIM:
                 // スワイプ開始位置を記録
@@ -108,6 +124,9 @@ public class Kicker : MonoBehaviour
                 // キックアニメーション再生
                 if (kickAnimController != null)
                     kickAnimController.StartKick();
+                break;
+            case KickerState.WATCH:
+                // 何もしない
                 break;
             case KickerState.GOAL:
                 // ゴール時のアニメーション再生
@@ -170,11 +189,24 @@ public class Kicker : MonoBehaviour
     private void UpdateKickState()
     {
         // ボールに接触したら次のステートへ遷移する
+        if (isTouchedBall)
+        {
+            ChangeState(KickerState.WATCH);
+        }
 
-        currentTimer += Time.deltaTime;
+    }
 
-        // Stub　一定時間待機で次のステートへ
-        if (currentTimer >= 1.5f)
+    private void UpdateWatchState()
+    {
+        // ボールが入るかどうか待つ
+        watchCurrentTimer += Time.deltaTime;
+
+        if (watchCurrentTimer > watchTime)
+        {
+            ChangeState(KickerState.NOGOAL);
+        }
+
+        if (isGoal)
         {
             ChangeState(KickerState.GOAL);
         }
@@ -183,13 +215,19 @@ public class Kicker : MonoBehaviour
     private void UpdateGoalState()
     {
         // ゴール状態での更新処理
-        // 例: アニメーション完了を待つなど
+        // アニメーション完了を待つなど
+
+        // [DEBUG]
+        ChangeState(KickerState.WAIT);
+        
     }
 
     private void UpdateNoGoalState()
     {
         // ノーゴール状態での更新処理
-        // 例: アニメーション完了を待つなど
+        // アニメーション完了を待つなど
+        // [DEBUG]
+        ChangeState(KickerState.WAIT);
     }
 
     // 状態から抜けるときの処理
@@ -202,7 +240,6 @@ public class Kicker : MonoBehaviour
             case KickerState.WAIT:
                 break;
             case KickerState.AIM:
-                // 方向と強さを確定
                 break;
             case KickerState.KICK:
                 // ボールに力を加える
@@ -216,15 +253,22 @@ public class Kicker : MonoBehaviour
         }
     }
 
-    // レフェリーによって状態を設定するためのパブリックメソッド
-    public void SetToStandby()
+    // レフェリーによって状態をWAIT状態にするためのパブリックメソッド
+    public void SetToWAIT()
     {
-        ChangeState(KickerState.STANDBY);
+        ChangeState(KickerState.WAIT);
     }
 
     // 現在の状態を取得するメソッド
-    public KickerState GetCurrentState()
+    public KickerState GetCurrentState()    
     {
         return currentState;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ball"))
+        {
+            isTouchedBall = true;
+        }
     }
 }
