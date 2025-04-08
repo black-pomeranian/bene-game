@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour
     private Rigidbody rb;
     private Vector3 initPosition;
 
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         initPosition = this.transform.position;
