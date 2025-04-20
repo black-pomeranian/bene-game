@@ -16,13 +16,13 @@ public class Keeper : MonoBehaviour
     }
 
     // シリアライザブル
-    [SerializeField] private float diveSpeed = 1.0f;
+    /*[SerializeField] private float diveSpeed = 1.0f;*/
 
     // 現在の状態
     private KeeperState currentState = KeeperState.STANDBY;
 
     // コンポーネント参照
-    /* private KeepAnimController keepAnimController; */
+     private KeepAnimController keepAnimController; 
     /* private Referee referee; */
 
     // 初期位置
@@ -34,12 +34,15 @@ public class Keeper : MonoBehaviour
     private Vector2 swipeEndPosition;
     private SwipeDirection diveDirection;
 
+    // [DEBUG]
+    private float elapsedTime;
+
     // Start is called before the first frame update
     void Start()
     {
         initPosition = this.transform.position;
         initRotation = this.transform.eulerAngles;
-        /*keepAnimController = FindObjectOfType<KeepAnimController>();*/
+        keepAnimController = FindObjectOfType<KeepAnimController>();
         /*referee = FindObjectOfType<Referee>();*/
 
         // 初期状態を設定
@@ -142,8 +145,6 @@ public class Keeper : MonoBehaviour
             swipeEndPosition = Input.mousePosition;
             diveDirection = SwipeUtility.GetSwipeDirection(swipeStartPosition, swipeEndPosition);
 
-            Debug.Log(diveDirection);
-
             ChangeState(KeeperState.GUARD);
         }
     }
@@ -151,19 +152,16 @@ public class Keeper : MonoBehaviour
     // GUARD状態の更新
     private void UpdateGuard()
     {
-        // Refereeがスコアへ入ったら状態変更
-        /*if (referee.IsScoreEntered())
+        // ガードアニメーションが終了したら状態変更
+        if (elapsedTime > 2.0f)
         {
-            ChangeState(KeeperState.NOTGUARDED);
+            ChangeState(KeeperState.WAIT);
         }
         else
         {
-            // ボールが防御されたかチェック
-            if (CheckBallGuarded())
-            {
-                ChangeState(KeeperState.GUARDED);
-            }
-        }*/
+            elapsedTime += Time.deltaTime;
+        }
+        
     }
 
     // GUARDED状態の更新
@@ -200,6 +198,7 @@ public class Keeper : MonoBehaviour
             case KeeperState.AIM:
                 break;
             case KeeperState.GUARD:
+                DiveExit();
                 break;
             case KeeperState.GUARDED:
                 break;
@@ -223,17 +222,32 @@ public class Keeper : MonoBehaviour
         swipeEndPosition = Vector2.zero;
         diveDirection = SwipeDirection.None;
         /*keepAnimController.StopKeep();*/
+
+        /* [DEBUG] */
+        elapsedTime = 0.0f;
     }
 
     // ダイブ
     private void Dive()
     {
-        
+        keepAnimController.PlayDiveAnim(diveDirection);
+    }
+
+    // ダイブExit
+    private void DiveExit()
+    {
+        keepAnimController.PlayDiveExitAnim();
     }
 
     // WAIT状態にするためのパブリックメソッド
     public void SetToWAIT()
     {
         ChangeState(KeeperState.WAIT);
+    }
+
+    // 現在の状態を取得するメソッド
+    public KeeperState GetCurrentState()
+    {
+        return currentState;
     }
 }
