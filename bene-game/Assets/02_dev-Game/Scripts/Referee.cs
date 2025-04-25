@@ -8,40 +8,69 @@ public class Referee : MonoBehaviour
     public enum RefereeState
     {
         INIT,
-        CHOOSE_KICKER,
+        MAKE_CHARACTER,
         STANDBY,
-        WATCH,
         JUDGE,
         SCORE
     }
 
+    private enum PlayerRule
+    {
+        KICKER,
+        KEEPER
+    }
+
     // シリアライザブル
-    [SerializeField] private float countdownTime = 3.0f;
+    [Header("ゲーム用パラメーター")]
     [SerializeField] private float goalJudgeTime = 5.0f;
+    [SerializeField, Tooltip("通常行うべきゲームの数。ただし、勝利が確定、決着がつかない場合ゲーム数は変更される")]
+    private int gameTurn = 5;
+
+    [Header("キッカー用変数")]
+    [SerializeField] private Kicker kickerObj;
+    /* [SerializeField] private KickerCpu kikckerCpuObj; */
+    [SerializeField] private Transform kickerInitTransform;
+    [SerializeField] private Transform kickerCameraTransform;
+
+    [Header("キーパー用変数")]
+    [SerializeField] private Keeper keeperObj;
+    /* [SerializeField] private KeeperCpu keeperCpuObj; */
+    [SerializeField] private Transform keeperInitTransform;
+    [SerializeField] private Transform keeperCameraTransform;
+
+    [SerializeField] private Ball ballObj;
+    [SerializeField] private Transform ballInitTransform;
+
 
     // 現在の状態
     private RefereeState currentState = RefereeState.INIT;
 
     // コンポーネント参照
+    private Camera mainCamera;
     private Kicker kicker;
     private Keeper keeper;
     private Ball ball;
-    private Camera mainCamera;
 
     // タイマー変数
     private float currentTimer = 0.0f;
 
     // スコア管理
-    private int kickerScore = 0;
-    private int keeperScore = 0;
+    private int playerScore = 0;
+    private int cpuScore = 0;
+
+    // ゲーム数管理(ターン数ではなく攻守交替の回数と等価)
+    private int currentGameCount = 0;
+
+    // プレイヤーの役割保持
+    private PlayerRule playerRule = PlayerRule.KICKER;
+
+    // フラグ
     private bool isGoal = false;
+    private bool isGameStarted = false;
 
     // スタート時の初期化
     void Start()
     {
-        kicker = FindObjectOfType<Kicker>();
-        keeper = FindObjectOfType<Keeper>();
-        ball = FindObjectOfType<Ball>();
         mainCamera = Camera.main;
 
         // 初期状態を設定
@@ -56,14 +85,11 @@ public class Referee : MonoBehaviour
             case RefereeState.INIT:
                 UpdateInitState();
                 break;
-            case RefereeState.CHOOSE_KICKER:
-                UpdateChooseKickerState();
+            case RefereeState.MAKE_CHARACTER:
+                UpdateMakeCharacterState();
                 break;
             case RefereeState.STANDBY:
                 UpdateStandbyState();
-                break;
-            case RefereeState.WATCH:
-                UpdateWatchState();
                 break;
             case RefereeState.JUDGE:
                 UpdateJudgeState();
@@ -94,21 +120,41 @@ public class Referee : MonoBehaviour
         {
             case RefereeState.INIT:
                 // オブジェクトを初期化
+                ResetParameters();
                 break;
-            case RefereeState.CHOOSE_KICKER:
+            case RefereeState.MAKE_CHARACTER:
                 // キッカーを決める
+                if (playerRule == PlayerRule.KICKER)
+                {
+                    playerRule = PlayerRule.KEEPER;
+                    kicker = Instantiate(kickerObj, kickerInitTransform.position, kickerInitTransform.rotation);
+                    /* [TODO] KeeperCpuが作成でき次第差し替え */
+                    keeper = Instantiate(keeperObj, keeperInitTransform.position, keeperInitTransform.rotation);
+                }
+                else
+                {
+                    playerRule = PlayerRule.KICKER;
+                    /* [TODO] KickerCpuが作成でき次第差し替え */
+                    kicker = Instantiate(kickerObj, kickerInitTransform.position, kickerInitTransform.rotation);
+                    keeper = Instantiate(keeperObj, keeperInitTransform.position, keeperInitTransform.rotation);
+                }
+
+                ball = Instantiate(ballObj, ballInitTransform.position, ballInitTransform.rotation);
+                ball.Initialize();
+
+                // オブジェクト初期化
+                kicker.ChangeState(Kicker.KickerState.STANDBY);
+                keeper.ChangeState(Keeper.KeeperState.STANDBY);
                 break;
             case RefereeState.STANDBY:
-                // カウントダウン開始
-                currentTimer = countdownTime;
-                break;
-            case RefereeState.WATCH:
-                // ボール挙動時間計測開始
-                currentTimer = 0.0f;
+                // キッカーシュート待ち
+                kicker.ChangeState(Kicker.KickerState.WAIT);
+                keeper.ChangeState(Keeper.KeeperState.WAIT);
                 break;
             case RefereeState.JUDGE:
-                // ゴール有無判定計測開始
+                // ボール挙動時間計測開始
                 currentTimer = 0.0f;
+                isGoal = false;
                 break;
             case RefereeState.SCORE:
                 // スコア計算
@@ -121,13 +167,21 @@ public class Referee : MonoBehaviour
     private void UpdateInitState()
     {
         // プレイヤーのスタート操作やシーンの読み込みが完了したら次へ
-        ChangeState(RefereeState.CHOOSE_KICKER);
+        isGameStarted = true;
+        ChangeState(RefereeState.MAKE_CHARACTER);
     }
 
-    private void UpdateChooseKickerState()
+    private void UpdateMakeCharacterState()
     {
         // カメラ移動などの処理
-        SwitchCameraToKicker();
+        if (playerRule == PlayerRule.KICKER)
+        {
+            MoveCameraToPlayer(kickerCameraTransform);
+        }
+        else
+        {
+            MoveCameraToPlayer(keeperCameraTransform);
+        }
 
         // カメラ移動が完了したら次へ
         ChangeState(RefereeState.STANDBY);
@@ -135,33 +189,7 @@ public class Referee : MonoBehaviour
 
     private void UpdateStandbyState()
     {
-        // カウントダウン処理
-        currentTimer -= Time.deltaTime;
-
-        if (currentTimer <= 0)
-        {
-            // カウントダウン終了、キッカーとキーパーに通知
-            if (kicker != null)
-                kicker.SetToWAIT();
-            if (keeper != null)
-                keeper.SetToWAIT();
-
-            ChangeState(RefereeState.WATCH);
-        }
-    }
-
-    private void UpdateWatchState()
-    {
-        // ボール挙動時間計測中
-
-        // キッカーがKICK状態になったら監視開始
-        if (kicker != null && kicker.GetCurrentState() == Kicker.KickerState.KICK)
-        {
-            // ボールの動きを監視
-        }
-
-        // ボール挙動時間計測終了条件
-        if (IsGoalJudgePossible())
+        if (kicker != null && kicker.GetCurrentState() == Kicker.KickerState.WATCH)
         {
             ChangeState(RefereeState.JUDGE);
         }
@@ -169,56 +197,65 @@ public class Referee : MonoBehaviour
 
     private void UpdateJudgeState()
     {
-        // ゴール判定時間計測
+        // ボール挙動時間計測中
         currentTimer += Time.deltaTime;
 
-        // ゴールに入った場合
-        if (CheckGoal())
+        // ボール挙動時間超過またはゴールしたら
+        // 以降ゴールかどうかはisGoalで判断。
+        if (currentTimer >= goalJudgeTime)
         {
-            isGoal = true;
             ChangeState(RefereeState.SCORE);
         }
 
-        // 時間切れ
-        if (currentTimer >= goalJudgeTime)
+        if (isGoal)
         {
-            isGoal = false;
-            ChangeState(RefereeState.SCORE);
+            // GOAL演出表示
+            Debug.Log("GOAL!!!");
         }
     }
 
     private void UpdateScoreState()
     {
-        // スコア表示中
+        // [TODO]スコア表示中
 
         // キーパーとキッカーに結果を通知
         if (isGoal)
         {
             // ゴールの場合
-            if (kicker != null && kicker.GetCurrentState() != Kicker.KickerState.GOAL)
+            if (kicker != null)
                 kicker.ChangeState(Kicker.KickerState.GOAL);
 
-            if (keeper != null && keeper.GetCurrentState() != Keeper.KeeperState.NOTGUARDED)
+            if (keeper != null)
                 keeper.ChangeState(Keeper.KeeperState.NOTGUARDED);
         }
         else
         {
             // ノーゴールの場合
-            if (kicker != null && kicker.GetCurrentState() != Kicker.KickerState.NOGOAL)
+            if (kicker != null)
                 kicker.ChangeState(Kicker.KickerState.NOGOAL);
 
-            if (keeper != null && keeper.GetCurrentState() != Keeper.KeeperState.GUARDED)
+            if (keeper != null)
                 keeper.ChangeState(Keeper.KeeperState.GUARDED);
         }
 
         // 次のラウンドへ
         if (ShouldContinueGame())
         {
-            ChangeState(RefereeState.CHOOSE_KICKER);
+            Debug.Log("PLAYER vs CPU: " + playerScore + " | " + cpuScore);
+            ChangeState(RefereeState.MAKE_CHARACTER);
         }
         else
         {
-            // ゲーム終了処理
+            isGameStarted = false;
+            if (playerScore > cpuScore)
+            {
+                Debug.Log("WIN!!!");
+            }
+            else
+            {
+                Debug.Log("LOSE");
+            }
+            ChangeState(RefereeState.INIT);
         }
     }
 
@@ -229,33 +266,50 @@ public class Referee : MonoBehaviour
         {
             case RefereeState.INIT:
                 break;
-            case RefereeState.CHOOSE_KICKER:
-                // キッカーとキーパーを左右に配置、カメラ移動
+            case RefereeState.MAKE_CHARACTER:
+                // キッカーとキーパーを配置、カメラ移動
                 break;
             case RefereeState.STANDBY:
-                // WAIT状態へ遷移
-                break;
-            case RefereeState.WATCH:
+                currentGameCount++;
                 break;
             case RefereeState.JUDGE:
+                // ゴールならUI演出など表示
                 break;
             case RefereeState.SCORE:
+                ResetGame();
                 break;
         }
     }
 
-    // ゴール判定が可能かチェック
-    private bool IsGoalJudgePossible()
+    private void ResetParameters()
     {
-        // ボールが停止したか一定時間経過したかを判定
-        return ball != null && (kicker.GetCurrentState() == Kicker.KickerState.WATCH);
+        playerScore = 0;
+        cpuScore = 0;
+
+        currentGameCount = 0;
+
+        playerRule = PlayerRule.KEEPER;
+
+        currentTimer = 0.0f;
+        isGoal = false;
+    }
+
+    private void MoveCameraToPlayer(Transform targetTransform)
+    {
+        if (mainCamera == null || targetTransform == null)
+        {
+            Debug.LogWarning("mainCamera または targetTransform が null です。");
+            return;
+        }
+
+        mainCamera.transform.position = targetTransform.position;
+        mainCamera.transform.rotation = targetTransform.rotation;
     }
 
     // ゴールしたかチェック
-    private bool CheckGoal()
+    public void NotifyGoal()
     {
-        /*return goalNet != null && goalNet.IsGoal();*/
-        return true;
+        isGoal = true;
     }
 
     // スコア更新
@@ -263,41 +317,51 @@ public class Referee : MonoBehaviour
     {
         if (isGoal)
         {
-            kickerScore++;
-        }
-        else
-        {
-            keeperScore++;
+            if(playerRule == PlayerRule.KICKER)
+            {
+                playerScore++;
+            }
+            else
+            {
+                cpuScore++;
+            }
         }
     }
 
     // ゲームを続けるかチェック
     private bool ShouldContinueGame()
     {
-        // 最大ラウンド数やスコア条件に基づいて判定
-        return true; // 仮実装
-    }
+        int totalTurnsPerTeam = gameTurn;
+        int totalTurnsPerGame = totalTurnsPerTeam * 2;
+        int remainingTurns = totalTurnsPerGame - currentGameCount;
 
-    // カメラをキッカー側に切り替え
-    private void SwitchCameraToKicker()
-    {
-        if (mainCamera != null)
+        // 勝敗が確定しているかチェック（残り回数で逆転できない）
+        int playerRemainingShots = (totalTurnsPerTeam) - (currentGameCount + 1) / 2;
+        int cpuRemainingShots = (totalTurnsPerTeam) - (currentGameCount / 2);
+
+        if (playerScore > cpuScore + cpuRemainingShots)
         {
-            // カメラの位置と向きを設定
-            // mainCamera.transform.position = ...
-            // mainCamera.transform.rotation = ...
+            return false; // プレイヤーの勝ち確定
         }
+
+        if (cpuScore > playerScore + playerRemainingShots)
+        {
+            return false; // CPUの勝ち確定
+        }
+
+        // 規定回数に達していて、かつ同点でなければ終了
+        if (currentGameCount >= totalTurnsPerGame && playerScore != cpuScore)
+        {
+            return false; // 決着がついた
+        }
+
+        return true; // ゲーム続行
     }
 
-    // キッカーを表示中かどうか
-    public bool IsShowingKicker()
+    private void ResetGame()
     {
-        return currentState == RefereeState.CHOOSE_KICKER || currentState == RefereeState.STANDBY;
-    }
-
-    // スコアへ入ったか
-    public bool IsInScoreState()
-    {
-        return currentState == RefereeState.SCORE;
+        Destroy(kicker.gameObject);
+        Destroy(keeper.gameObject);
+        Destroy(ball.gameObject);
     }
 }
