@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Kicker
   - Ball
+  - Keeper
+  - GoalNet
   layers:
   - Default
   - TransparentFX

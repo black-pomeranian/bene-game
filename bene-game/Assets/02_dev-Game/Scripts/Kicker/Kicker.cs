@@ -49,11 +49,9 @@ public class Kicker : MonoBehaviour
         initRotation = this.transform.eulerAngles;
         kickAnimController = FindObjectOfType<KickAnimController>();
         ball = FindObjectOfType<Ball>();
-        /*referee = FindObjectOfType<Referee>();*/
 
         // 初期状態を設定
-        /* [DEBUG] */
-        ChangeState(KickerState.WAIT);
+        ChangeState(KickerState.STANDBY);
     }
 
     void Update()
@@ -163,8 +161,6 @@ public class Kicker : MonoBehaviour
             
             /* 2次元のタッチ情報のベクトルを3次元へマッピング */
             aimVector3 = new Vector3(aimVector2.x * forceScale, Mathf.Abs(aimVector2.y) * forceScale, aimVector2.y * forceScale * 5.0f);
-            
-            Debug.Log("Aim: " + aimVector3);
 
             ChangeState(KickerState.KICK);
         }
@@ -200,9 +196,6 @@ public class Kicker : MonoBehaviour
     {
         // ゴール状態での更新処理
         // アニメーション完了を待つなど
-
-        // [DEBUG]
-        ChangeState(KickerState.WAIT);
         
     }
 
@@ -210,8 +203,7 @@ public class Kicker : MonoBehaviour
     {
         // ノーゴール状態での更新処理
         // アニメーション完了を待つなど
-        // [DEBUG]
-        ChangeState(KickerState.WAIT);
+
     }
 
     // 状態から抜けるときの処理

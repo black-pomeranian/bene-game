@@ -11,6 +11,7 @@ public class Keeper : MonoBehaviour
         WAIT,
         AIM,
         GUARD,
+        WATCH,
         GUARDED,
         NOTGUARDED
     }
@@ -34,7 +35,6 @@ public class Keeper : MonoBehaviour
     private Vector2 swipeEndPosition;
     private SwipeDirection diveDirection;
 
-    // [DEBUG]
     private float elapsedTime;
 
     // Start is called before the first frame update
@@ -43,11 +43,9 @@ public class Keeper : MonoBehaviour
         initPosition = this.transform.position;
         initRotation = this.transform.eulerAngles;
         keepAnimController = FindObjectOfType<KeepAnimController>();
-        /*referee = FindObjectOfType<Referee>();*/
 
         // 初期状態を設定
-        /* [DEBUG] */
-        ChangeState(KeeperState.WAIT);
+        ChangeState(KeeperState.STANDBY);
     }
 
     void Update()
@@ -66,6 +64,9 @@ public class Keeper : MonoBehaviour
                 break;
             case KeeperState.GUARD:
                 UpdateGuard();
+                break;
+            case KeeperState.WATCH:
+                UpdateWatch();
                 break;
             case KeeperState.GUARDED:
                 UpdateGuarded();
@@ -106,6 +107,9 @@ public class Keeper : MonoBehaviour
             case KeeperState.GUARD:
                 // 防御アニメーション再生
                 Dive();
+                break;
+            case KeeperState.WATCH:
+                // 結果待ち
                 break;
             case KeeperState.GUARDED:
                 // 成功アニメーション再生
@@ -164,25 +168,22 @@ public class Keeper : MonoBehaviour
         
     }
 
+    // WATCH状態の更新
+    private void UpdateWatch()
+    {
+        // 結果待ち状態
+    }
+
     // GUARDED状態の更新
     private void UpdateGuarded()
     {
 
-        // アニメーション終了後、STANDBY状態に戻る
-        /*if (IsAnimationFinished())
-        {
-            ChangeState(KeeperState.STANDBY);
-        }*/
     }
 
     // NOTGUARDED状態の更新
     private void UpdateNotGuarded()
     {
-        // アニメーション終了後、STANDBY状態に戻る
-        /*if (IsAnimationFinished())
-        {
-            ChangeState(KeeperState.STANDBY);
-        }*/
+
     }
 
     // 状態を出るときの処理
@@ -200,14 +201,13 @@ public class Keeper : MonoBehaviour
             case KeeperState.GUARD:
                 DiveExit();
                 break;
+            case KeeperState.WATCH:
+                break;
             case KeeperState.GUARDED:
                 break;
             case KeeperState.NOTGUARDED:
                 break;
         }
-
-        // 状態を更新
-        currentState = newState;
     }
 
     // パラメータをリセット
@@ -223,7 +223,6 @@ public class Keeper : MonoBehaviour
         diveDirection = SwipeDirection.None;
         /*keepAnimController.StopKeep();*/
 
-        /* [DEBUG] */
         elapsedTime = 0.0f;
     }
 
