@@ -341,7 +341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7869349249307224174
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1149,7 +1149,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 437795484517749476}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SePlayer, Assembly-CSharp
+        m_MethodName: PlaySelectSE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2235171119487654658
 GameObject:
   m_ObjectHideFlags: 0
@@ -3691,6 +3703,7 @@ GameObject:
   - component: {fileID: 623155341963130745}
   - component: {fileID: 2591572967935482824}
   - component: {fileID: 1507905321221863613}
+  - component: {fileID: 6415020369172916027}
   m_Layer: 5
   m_Name: Button_Sound
   m_TagString: Untagged
@@ -3799,7 +3812,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2591572967935482824}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6415020369172916027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970129146692146157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55bfa5500abc79b40a9794ff62c94b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundOnSprite: {fileID: 21300000, guid: 5dfd8c6717916e145845481326a3a198, type: 3}
+  soundOffSprite: {fileID: 21300000, guid: 2191907cf272e3f449e0b3f0b2596f71, type: 3}
+  sound: {fileID: 0}
 --- !u!1 &9110346855608538435
 GameObject:
   m_ObjectHideFlags: 0
