@@ -2454,10 +2454,10 @@ GameObject:
   - component: {fileID: 8565599370528109792}
   - component: {fileID: 2323633013899849370}
   - component: {fileID: -6911093498570026509}
-  - component: {fileID: 5322968305912911056}
+  - component: {fileID: -4446421399489391731}
   - component: {fileID: 7662715088663863218}
   m_Layer: 0
-  m_Name: Kicker
+  m_Name: KickerCpu
   m_TagString: Kicker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2515,7 +2515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c003510930484d44b15a49b0204a7b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5322968305912911056
+--- !u!114 &-4446421399489391731
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2524,11 +2524,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9049085777838042714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90bbfba9f298e4745b1863b9707e89e2, type: 3}
+  m_Script: {fileID: 11500000, guid: eec2131c8ae1b4d13af0e337d2950236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   watchTime: 5
-  kickForce: 0.5
+  kickForce: 0.1
+  maxKickForce: 1000
+  minKickForce: 300
   kickTargets:
   - {fileID: 2491850593637822520}
   - {fileID: 7868401835735757161}
@@ -2536,6 +2538,8 @@ MonoBehaviour:
   - {fileID: 4993750983187736032}
   - {fileID: 5157461727527360426}
   - {fileID: 4904351214086853597}
+  waitMaxTime: 5
+  waitMinTime: 2
 --- !u!65 &7662715088663863218
 BoxCollider:
   m_ObjectHideFlags: 0

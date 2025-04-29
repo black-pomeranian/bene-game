@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private Rigidbody rb;
+
+    [SerializeField] private float torqueMultiplier = 10f; // トルクの強さ
+
+    public Rigidbody rb {get; private set; } // Rigidbodyコンポーネント
     private Vector3 initPosition;
 
     private void Awake()
@@ -28,6 +31,11 @@ public class Ball : MonoBehaviour
         if (rb != null)
         {
             rb.AddForce(force, ForceMode.Impulse);
+
+             // トルクを加えて回転させる
+            // 例えば進行方向と上方向から回転軸を作る:
+            Vector3 torque = Vector3.Cross(force.normalized, Vector3.down) * torqueMultiplier;
+            rb.AddTorque(torque, ForceMode.Impulse);
         }
     }
 }

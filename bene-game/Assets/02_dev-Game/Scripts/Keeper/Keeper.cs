@@ -16,8 +16,19 @@ public class Keeper : MonoBehaviour
         NOTGUARDED
     }
 
+    [System.Serializable]
+    public class SwipeMoveOffset
+    {
+        public SwipeDirection direction;
+        public Vector3 offset;
+    }
+
     // シリアライザブル
-    /*[SerializeField] private float diveSpeed = 1.0f;*/
+    [SerializeField] private float diveAnimExitTime = 2.0f;
+    [SerializeField] private float diveDistWeight = 5.0f;
+    [SerializeField] private AnimationCurve easeCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+    [SerializeField] private List<SwipeMoveOffset> swipeMoveOffsets = new List<SwipeMoveOffset>();
+
 
     // 現在の状態
     private KeeperState currentState = KeeperState.STANDBY;
@@ -34,6 +45,9 @@ public class Keeper : MonoBehaviour
     private Vector2 swipeStartPosition;
     private Vector2 swipeEndPosition;
     private SwipeDirection diveDirection;
+    private Vector3 diveStartPosition;
+    private Vector3 targetPosition;
+    private Coroutine guardCoroutine;
 
     private float elapsedTime;
 
@@ -105,6 +119,11 @@ public class Keeper : MonoBehaviour
                 swipeStartPosition = Input.mousePosition;
                 break;
             case KeeperState.GUARD:
+                // コルーチン開始
+                diveStartPosition = this.transform.position;
+                if (guardCoroutine != null) StopCoroutine(guardCoroutine);
+                guardCoroutine = StartCoroutine(GuardRoutine());
+
                 // 防御アニメーション再生
                 Dive();
                 break;
@@ -157,14 +176,12 @@ public class Keeper : MonoBehaviour
     private void UpdateGuard()
     {
         // ガードアニメーションが終了したら状態変更
-        if (elapsedTime > 2.0f)
+        if (elapsedTime > diveAnimExitTime)
         {
-            ChangeState(KeeperState.WAIT);
+            ChangeState(KeeperState.WATCH);
         }
-        else
-        {
-            elapsedTime += Time.deltaTime;
-        }
+        
+        elapsedTime += Time.deltaTime;
         
     }
 
@@ -238,11 +255,56 @@ public class Keeper : MonoBehaviour
         keepAnimController.PlayDiveExitAnim();
     }
 
-    // WAIT状態にするためのパブリックメソッド
-    public void SetToWAIT()
+    private IEnumerator GuardRoutine()
+{
+    // 目標位置を先に計算しておく
+    targetPosition = CalculateTargetPosition(diveDirection);
+
+    // 位置がほぼ一致するまでループ
+    while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
     {
-        ChangeState(KeeperState.WAIT);
+        // 毎フレーム少しずつ移動
+        MoveTowardsTarget(targetPosition);
+
+        yield return null; // 次フレームまで待つ
     }
+
+    // ループを抜けた＝目的地に到達した
+    guardCoroutine = null;
+}
+    private void MoveTowardsTarget(Vector3 targetPosition)
+    {
+        // 正規化した経過時間（0～1）
+        float t = elapsedTime / diveAnimExitTime;
+        // easeCurveでイージング
+        float easedT = easeCurve.Evaluate(t);
+
+        // ターゲットに向かって移動
+        transform.position = Vector3.Lerp(
+            diveStartPosition,
+            targetPosition,
+            easedT
+        );
+    }
+
+    private Vector3 CalculateTargetPosition(SwipeDirection direction)
+    {
+        // 今の位置
+        Vector3 currentPosition = transform.position;
+
+        // 対応するオフセットを探す
+        foreach (var swipeOffset in swipeMoveOffsets)
+        {
+            if (swipeOffset.direction == direction)
+            {
+                return currentPosition + (swipeOffset.offset * diveDistWeight);
+            }
+        }
+
+        // なかったら今の位置のまま
+        return currentPosition;
+    }
+
 
     // 現在の状態を取得するメソッド
     public KeeperState GetCurrentState()
