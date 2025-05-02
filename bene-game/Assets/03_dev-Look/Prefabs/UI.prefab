@@ -341,7 +341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7869349249307224174
 RectTransform:
   m_ObjectHideFlags: 0
@@ -373,7 +373,7 @@ Canvas:
   m_GameObject: {fileID: 997477970379453484}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1246,6 +1246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1601452708107270604}
+  - component: {fileID: 7348375358119064447}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -1272,6 +1273,22 @@ Transform:
   - {fileID: 1426279713209189077}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7348375358119064447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532469527256901649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a5a5a7948a59744b9a268e8ebbe1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startUI: {fileID: 997477970379453484}
+  gameUI: {fileID: 4999499626104394870}
+  endUI: {fileID: 5268804981141437489}
+  soundUI: {fileID: 7206183326332583264}
 --- !u!1 &2582495805623092589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,7 +2294,7 @@ Canvas:
   m_GameObject: {fileID: 4999499626104394870}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2382,7 +2399,7 @@ Canvas:
   m_GameObject: {fileID: 5268804981141437489}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -3106,7 +3123,7 @@ Canvas:
   m_GameObject: {fileID: 7206183326332583264}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
