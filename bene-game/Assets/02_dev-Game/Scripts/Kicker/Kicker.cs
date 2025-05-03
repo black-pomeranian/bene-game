@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Kicker : MonoBehaviour
 {
+    // kick情報通知イベント
+    public event System.EventHandler<KickEventArgs> OnKicked;
+
     // 状態を表す列挙型
     public enum KickerState
     {
@@ -15,17 +18,27 @@ public class Kicker : MonoBehaviour
         GOAL,
         NOGOAL
     }
-    
+
+    [System.Serializable]
+    public class KickTarget
+    {
+        public SwipeDirection direction;
+        public Transform target;
+    }
+
     // シリアライザブル
     [SerializeField] private float watchTime = 5.0f;
-    [SerializeField] private float forceScale = 0.1f;
+    [SerializeField] public float kickForce = 0.1f;
+    [SerializeField] public float maxKickForce = 1000f;
+    [SerializeField] public float minKickForce = 300f;
+    [SerializeField] public List<KickTarget> kickTargets = new List<KickTarget>();
 
     // 現在の状態
     private KickerState currentState = KickerState.STANDBY;
 
     // コンポーネント参照
     private KickAnimController kickAnimController;
-    private Ball ball;
+    public Ball ball {get; private set;}
     /* private Referee referee; */
 
     // 初期位置
@@ -33,9 +46,11 @@ public class Kicker : MonoBehaviour
     private Vector3 initRotation;
 
     // KICK状態用変数    
-    private Vector3 aimVector3;
+    public Vector3 aimVector3 {get; set;}
     private Vector2 swipeStartPosition;
     private Vector2 swipeEndPosition;
+    private float swipeStartTime;
+    private float swipeEndTime;
     private bool isTouchedBall;
 
     // WATCH状態用変数
@@ -97,7 +112,7 @@ public class Kicker : MonoBehaviour
     }
 
     // 状態に入るときの処理
-    private void EnterState(KickerState state)
+    protected virtual void EnterState(KickerState state)
     {
         switch (state)
         {
@@ -110,6 +125,7 @@ public class Kicker : MonoBehaviour
             case KickerState.AIM:
                 // スワイプ開始位置を記録
                 swipeStartPosition = Input.mousePosition;
+                swipeStartTime = Time.time;
                 break;
             case KickerState.KICK:
                 // キックアニメーション再生
@@ -141,7 +157,7 @@ public class Kicker : MonoBehaviour
         }*/
     }
 
-    private void UpdateWaitState()
+    protected virtual void UpdateWaitState()
     {
         // タッチ/クリック入力検出
         if (Input.GetMouseButtonDown(0))
@@ -151,16 +167,39 @@ public class Kicker : MonoBehaviour
     }
 
     // AIM状態の更新
-    private void UpdateAimState()
+    protected virtual void UpdateAimState()
     {
         // スワイプ終了（指/マウスを離した）
         if (Input.GetMouseButtonUp(0))
         {
             swipeEndPosition = Input.mousePosition;
-            Vector2 aimVector2 = swipeStartPosition - swipeEndPosition;
+            swipeEndTime = Time.time;
             
-            /* 2次元のタッチ情報のベクトルを3次元へマッピング */
-            aimVector3 = new Vector3(aimVector2.x * forceScale, Mathf.Abs(aimVector2.y) * forceScale, aimVector2.y * forceScale * 5.0f);
+            // スワイプ時間の計算
+            float swipeTime = swipeEndTime - swipeStartTime;
+            
+            // スワイプ速度の計算（スワイプ距離 / 時間）
+            float swipeDistance = Vector2.Distance(swipeStartPosition, swipeEndPosition);
+            float swipeSpeed = swipeTime > 0 ? swipeDistance / swipeTime : 0;
+            
+            // 最も近いターゲットを見つける
+            KickTarget closestTarget = FindClosestTarget(swipeEndPosition);
+            
+            // ボールからターゲットへの方向ベクトル
+            Vector3 directionToTarget = (closestTarget.target.position - ball.rb.transform.position).normalized;
+            
+            // スワイプ速度に基づいてキック力を計算（より速いスワイプ = より強いキック）
+            float kickPower = Mathf.Clamp(swipeSpeed * kickForce, minKickForce, maxKickForce);
+            
+            // 最終的なキックベクトルの計算
+            aimVector3 = directionToTarget * kickPower;
+            
+            // 中央下のターゲットの場合は、より平らな軌道に（ローボール）
+            
+            if (closestTarget.direction == SwipeDirection.Left || closestTarget.direction == SwipeDirection.Right || closestTarget.direction == SwipeDirection.Down )
+            {
+                aimVector3 = new Vector3(aimVector3.x, aimVector3.y*0.1f, aimVector3.z);
+            }
 
             ChangeState(KickerState.KICK);
         }
@@ -171,9 +210,11 @@ public class Kicker : MonoBehaviour
         // ボールに接触したら次のステートへ遷移する
         if (isTouchedBall)
         {
+            // キックイベント発行
+            OnKicked?.Invoke(this, new KickEventArgs(aimVector3.normalized, aimVector3.magnitude));
+
             ChangeState(KickerState.WATCH);
         }
-
     }
 
     private void UpdateWatchState()
@@ -246,10 +287,28 @@ public class Kicker : MonoBehaviour
         kickAnimController.StopKick();
     }
 
-    // WAIT状態にするためのパブリックメソッド
-    public void SetToWAIT()
-    {
-        ChangeState(KickerState.WAIT);
+    private KickTarget FindClosestTarget(Vector2 screenPosition)
+    {   
+        KickTarget closest = null;
+        float closestDistance = float.MaxValue;
+        
+        foreach (KickTarget kickTarget in kickTargets)
+        {
+            // ターゲットのワールド座標をスクリーン座標に変換
+            Vector2 targetScreenPos = Camera.main.WorldToScreenPoint(kickTarget.target.position);
+            
+            // スクリーン座標での距離を計算
+            float distance = Vector2.Distance(screenPosition, targetScreenPos);
+            
+            // より近いターゲットが見つかれば更新
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closest = kickTarget;
+            }
+        }
+        
+        return closest;
     }
 
     // 現在の状態を取得するメソッド

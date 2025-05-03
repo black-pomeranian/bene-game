@@ -45,12 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c22a4deff7ac6d4ba663e368abca838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goalJudgeTime: 5
+  goalJudgeTime: 4
   gameTurn: 5
-  kickerObj: {fileID: 6328282763229714203, guid: 5809ba2ac47fc5b49a6de4df5e164460, type: 3}
+  kickerObj: {fileID: 5322968305912911056, guid: 5809ba2ac47fc5b49a6de4df5e164460, type: 3}
+  kickerCpuObj: {fileID: -4446421399489391731, guid: f299c642325f24dda8cc965973f9c459, type: 3}
   kickerInitTransform: {fileID: 0}
   kickerCameraTransform: {fileID: 0}
   keeperObj: {fileID: 3481142296468856725, guid: 16556a412125be3408384356bc8ba093, type: 3}
+  keeperCpuObj: {fileID: 2027011850079427598, guid: c33d534dfb4a66148b51bd667f7aa089, type: 3}
   keeperInitTransform: {fileID: 0}
   keeperCameraTransform: {fileID: 0}
   ballObj: {fileID: 6662560163495286234, guid: 2ba358b4b1438524290fdd2768b92020, type: 3}
@@ -103,7 +105,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
