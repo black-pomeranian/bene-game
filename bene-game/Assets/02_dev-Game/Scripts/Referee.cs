@@ -34,7 +34,7 @@ public class Referee : MonoBehaviour
 
     [Header("キーパー用変数")]
     [SerializeField] private Keeper keeperObj;
-    /* [SerializeField] private KeeperCpu keeperCpuObj; */
+    [SerializeField] private KeeperCpu keeperCpuObj;
     [SerializeField] private Transform keeperInitTransform;
     [SerializeField] private Transform keeperCameraTransform;
 
@@ -136,7 +136,8 @@ public class Referee : MonoBehaviour
                     // 次のターンPlayerはKicker
                     playerRule = PlayerRule.KICKER;
                     kicker = Instantiate(kickerObj, kickerInitTransform.position, kickerInitTransform.rotation);
-                    keeper = Instantiate(keeperObj, keeperInitTransform.position, keeperInitTransform.rotation);
+                    kicker.OnKicked += HandleKicked;
+                    keeper = Instantiate(keeperCpuObj, keeperInitTransform.position, keeperInitTransform.rotation);
                 }
 
                 ball = Instantiate(ballObj, ballInitTransform.position, ballInitTransform.rotation);
@@ -292,6 +293,18 @@ public class Referee : MonoBehaviour
 
         currentTimer = 0.0f;
         isGoal = false;
+    }
+
+    private void HandleKicked(object sender, KickEventArgs e)
+    {
+        if(keeper != null && playerRule == PlayerRule.KICKER)
+        {
+            // CPU用にキック情報をセットする
+            /*SwipeDirection direction = (SwipeDirection)(Random.Range(0, (int)SwipeDirection.None));*/
+            SwipeDirection direction = SwipeDirection.Left;
+            float arrivalTime = 0.5f;
+            keeper.SetDiveInfoFromKick(direction, arrivalTime);
+        }
     }
 
     private void MoveCameraToPlayer(Transform targetTransform)

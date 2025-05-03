@@ -43,9 +43,8 @@ public class KickerCpu : Kicker
     // AIM状態の更新
     protected override void UpdateAimState()
     {
-        Transform target = kickTargets[Random.Range(0, kickTargets.Count)];
-        Debug.Log(target);
-        Vector3 directionToTarget = (target.position - ball.rb.transform.position).normalized;
+        KickTarget target = kickTargets[Random.Range(0, kickTargets.Count)];
+        Vector3 directionToTarget = (target.target.position - ball.rb.transform.position).normalized;
         float kickForce = Random.Range(minKickForce, maxKickForce);
 
         aimVector3 = directionToTarget * kickForce;

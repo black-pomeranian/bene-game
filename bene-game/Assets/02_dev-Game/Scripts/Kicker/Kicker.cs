@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Kicker : MonoBehaviour
 {
+    // kick情報通知イベント
+    public event System.EventHandler<KickEventArgs> OnKicked;
+
     // 状態を表す列挙型
     public enum KickerState
     {
@@ -15,13 +18,20 @@ public class Kicker : MonoBehaviour
         GOAL,
         NOGOAL
     }
-    
+
+    [System.Serializable]
+    public class KickTarget
+    {
+        public SwipeDirection direction;
+        public Transform target;
+    }
+
     // シリアライザブル
     [SerializeField] private float watchTime = 5.0f;
     [SerializeField] public float kickForce = 0.1f;
     [SerializeField] public float maxKickForce = 1000f;
     [SerializeField] public float minKickForce = 300f;
-    [SerializeField] public List<Transform> kickTargets = new List<Transform>();
+    [SerializeField] public List<KickTarget> kickTargets = new List<KickTarget>();
 
     // 現在の状態
     private KickerState currentState = KickerState.STANDBY;
@@ -173,10 +183,10 @@ public class Kicker : MonoBehaviour
             float swipeSpeed = swipeTime > 0 ? swipeDistance / swipeTime : 0;
             
             // 最も近いターゲットを見つける
-            Transform closestTarget = FindClosestTarget(swipeEndPosition);
+            KickTarget closestTarget = FindClosestTarget(swipeEndPosition);
             
             // ボールからターゲットへの方向ベクトル
-            Vector3 directionToTarget = (closestTarget.position - ball.rb.transform.position).normalized;
+            Vector3 directionToTarget = (closestTarget.target.position - ball.rb.transform.position).normalized;
             
             // スワイプ速度に基づいてキック力を計算（より速いスワイプ = より強いキック）
             float kickPower = Mathf.Clamp(swipeSpeed * kickForce, minKickForce, maxKickForce);
@@ -186,7 +196,7 @@ public class Kicker : MonoBehaviour
             
             // 中央下のターゲットの場合は、より平らな軌道に（ローボール）
             
-            if (closestTarget == kickTargets[0] || closestTarget == kickTargets[4] || closestTarget == kickTargets[5])
+            if (closestTarget.direction == SwipeDirection.Left || closestTarget.direction == SwipeDirection.Right || closestTarget.direction == SwipeDirection.Down )
             {
                 aimVector3 = new Vector3(aimVector3.x, aimVector3.y*0.1f, aimVector3.z);
             }
@@ -200,9 +210,11 @@ public class Kicker : MonoBehaviour
         // ボールに接触したら次のステートへ遷移する
         if (isTouchedBall)
         {
+            // キックイベント発行
+            OnKicked?.Invoke(this, new KickEventArgs(aimVector3.normalized, aimVector3.magnitude));
+
             ChangeState(KickerState.WATCH);
         }
-
     }
 
     private void UpdateWatchState()
@@ -275,15 +287,15 @@ public class Kicker : MonoBehaviour
         kickAnimController.StopKick();
     }
 
-    private Transform FindClosestTarget(Vector2 screenPosition)
+    private KickTarget FindClosestTarget(Vector2 screenPosition)
     {   
-        Transform closest = null;
+        KickTarget closest = null;
         float closestDistance = float.MaxValue;
         
-        foreach (Transform kickTarget in kickTargets)
+        foreach (KickTarget kickTarget in kickTargets)
         {
             // ターゲットのワールド座標をスクリーン座標に変換
-            Vector2 targetScreenPos = Camera.main.WorldToScreenPoint(kickTarget.position);
+            Vector2 targetScreenPos = Camera.main.WorldToScreenPoint(kickTarget.target.position);
             
             // スクリーン座標での距離を計算
             float distance = Vector2.Distance(screenPosition, targetScreenPos);

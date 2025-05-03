@@ -52,6 +52,7 @@ MonoBehaviour:
   kickerInitTransform: {fileID: 0}
   kickerCameraTransform: {fileID: 0}
   keeperObj: {fileID: 3481142296468856725, guid: 16556a412125be3408384356bc8ba093, type: 3}
+  keeperCpuObj: {fileID: 2027011850079427598, guid: c33d534dfb4a66148b51bd667f7aa089, type: 3}
   keeperInitTransform: {fileID: 0}
   keeperCameraTransform: {fileID: 0}
   ballObj: {fileID: 6662560163495286234, guid: 2ba358b4b1438524290fdd2768b92020, type: 3}

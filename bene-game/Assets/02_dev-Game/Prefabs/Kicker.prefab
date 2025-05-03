@@ -2529,13 +2529,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   watchTime: 5
   kickForce: 0.5
+  maxKickForce: 1000
+  minKickForce: 300
   kickTargets:
-  - {fileID: 2491850593637822520}
-  - {fileID: 7868401835735757161}
-  - {fileID: 5232469451396682685}
-  - {fileID: 4993750983187736032}
-  - {fileID: 5157461727527360426}
-  - {fileID: 4904351214086853597}
+  - direction: 0
+    target: {fileID: 2491850593637822520}
+  - direction: 1
+    target: {fileID: 7868401835735757161}
+  - direction: 2
+    target: {fileID: 5232469451396682685}
+  - direction: 3
+    target: {fileID: 4993750983187736032}
+  - direction: 4
+    target: {fileID: 5157461727527360426}
+  - direction: 5
+    target: {fileID: 4904351214086853597}
 --- !u!65 &7662715088663863218
 BoxCollider:
   m_ObjectHideFlags: 0
