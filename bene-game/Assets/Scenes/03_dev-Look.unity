@@ -8763,10 +8763,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 997477970379453484, guid: 1955108e2e387a14ca9a7036394c677a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1507905321221863613, guid: 1955108e2e387a14ca9a7036394c677a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -8840,10 +8836,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 953981866068666057, guid: 76c021b26ff83db46acb271102b94636, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 036342f138f999c4283856a889df3e2e, type: 3}
     - target: {fileID: 5888806527926269421, guid: 76c021b26ff83db46acb271102b94636, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
