@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject endUI;
     [SerializeField] private GameObject soundUI;
+
+    [SerializeField] private TextMeshProUGUI textWin;
+    [SerializeField] private TextMeshProUGUI textLose;
+    [SerializeField] private TextMeshProUGUI textPlayerScore;
+    [SerializeField] private TextMeshProUGUI textCpuScore;
 
     // Start is called before the first frame update
     void Start()
@@ -96,6 +102,29 @@ public class UIManager : MonoBehaviour
         if (soundUI != null)
         {
             soundUI.SetActive(false);
+        }
+    }
+
+    public void SetResult(string result, int playerScore, int cpuScore)
+    {
+        textPlayerScore.text = playerScore.ToString();
+        textCpuScore.text = cpuScore.ToString();
+
+        // ˆê’U”ñ•\Ž¦‚É‚µ‚Ä‚©‚çŠY“–‚·‚é‚à‚Ì‚¾‚¯•\Ž¦
+        textWin.gameObject.SetActive(false);
+        textLose.gameObject.SetActive(false);
+
+        if (result == "WIN")
+        {
+            textWin.gameObject.SetActive(true);
+        }
+        else if (result == "LOSE")
+        {
+            textLose.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning($"•s–¾‚Èresult’l: {result}");
         }
     }
 }
