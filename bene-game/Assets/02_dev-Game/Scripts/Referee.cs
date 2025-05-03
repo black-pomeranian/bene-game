@@ -168,8 +168,10 @@ public class Referee : MonoBehaviour
     private void UpdateInitState()
     {
         // プレイヤーのスタート操作やシーンの読み込みが完了したら次へ
-        isGameStarted = true;
-        ChangeState(RefereeState.MAKE_CHARACTER);
+        if (isGameStarted)
+        {
+            ChangeState(RefereeState.MAKE_CHARACTER);
+        }
     }
 
     private void UpdateMakeCharacterState()
@@ -181,6 +183,7 @@ public class Referee : MonoBehaviour
         }
         else
         {
+            MoveCameraToPlayer(keeperCameraTransform);
             MoveCameraToPlayer(keeperCameraTransform);
         }
 
@@ -282,6 +285,12 @@ public class Referee : MonoBehaviour
         }
     }
 
+    public void GameStart()
+    {
+        isGameStarted = true;
+    }
+
+
     private void ResetParameters()
     {
         playerScore = 0;
@@ -300,8 +309,7 @@ public class Referee : MonoBehaviour
         if(keeper != null && playerRule == PlayerRule.KICKER)
         {
             // CPU用にキック情報をセットする
-            /*SwipeDirection direction = (SwipeDirection)(Random.Range(0, (int)SwipeDirection.None));*/
-            SwipeDirection direction = SwipeDirection.Left;
+            SwipeDirection direction = (SwipeDirection)(Random.Range(0, (int)SwipeDirection.None));
             float arrivalTime = 0.5f;
             keeper.SetDiveInfoFromKick(direction, arrivalTime);
         }
@@ -373,6 +381,7 @@ public class Referee : MonoBehaviour
 
     private void ResetGame()
     {
+        isGameStarted = false;
         Destroy(kicker.gameObject);
         Destroy(keeper.gameObject);
         Destroy(ball.gameObject);
