@@ -55,8 +55,13 @@ MonoBehaviour:
   keeperCpuObj: {fileID: 2027011850079427598, guid: c33d534dfb4a66148b51bd667f7aa089, type: 3}
   keeperInitTransform: {fileID: 0}
   keeperCameraTransform: {fileID: 0}
+  uiManager: {fileID: 0}
+  playerScoreUIManager: {fileID: 0}
+  cpuScoreUIManager: {fileID: 0}
   ballObj: {fileID: 6662560163495286234, guid: 2ba358b4b1438524290fdd2768b92020, type: 3}
   ballInitTransform: {fileID: 0}
+  sePlayer: {fileID: 0}
+  kickStartWaitTime: 1
 --- !u!1 &7043400418309542340
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,8 +114,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 43.27114, y: 14.02133, z: 11.353241}
-  m_Center: {x: 0.032978058, y: 1.216279, z: -2.4360504}
+  m_Size: {x: 43.27114, y: 14.02133, z: 10.543762}
+  m_Center: {x: 0.032978058, y: 1.216279, z: -2.8407898}
 --- !u!114 &3083111655482986443
 MonoBehaviour:
   m_ObjectHideFlags: 0

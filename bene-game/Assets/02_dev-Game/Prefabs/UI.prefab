@@ -341,7 +341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7869349249307224174
 RectTransform:
   m_ObjectHideFlags: 0
@@ -773,7 +773,7 @@ MonoBehaviour:
   - {fileID: 7313894322464570333}
   goal_icon: {fileID: 21300000, guid: a0896f083d93d5b4187b80d7ea34d850, type: 3}
   miss_icon: {fileID: 21300000, guid: aaf45977f3d9d894c9f1c54fc05e7db3, type: 3}
-  inactive_icon: {fileID: 0}
+  inactive_icon: {fileID: 21300000, guid: 80be3b09a86bc0b409d70568ca23e940, type: 3}
 --- !u!1 &1822123712684493314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,8 +1151,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SePlayer, Assembly-CSharp
-        m_MethodName: PlaySelectSE
+        m_TargetAssemblyTypeName: Referee, Assembly-CSharp
+        m_MethodName: GameStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1182,6 +1182,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SePlayer, Assembly-CSharp
+        m_MethodName: PlaySelectSE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1325,6 +1337,10 @@ MonoBehaviour:
   gameUI: {fileID: 4999499626104394870}
   endUI: {fileID: 5268804981141437489}
   soundUI: {fileID: 7206183326332583264}
+  textWin: {fileID: 2399490914461254441}
+  textLose: {fileID: 6427162298673756157}
+  textPlayerScore: {fileID: 3182782189159371046}
+  textCpuScore: {fileID: 3249750031818070077}
 --- !u!1 &2582495805623092589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,7 +2297,7 @@ MonoBehaviour:
   - {fileID: 856442799994444751}
   goal_icon: {fileID: 21300000, guid: a0896f083d93d5b4187b80d7ea34d850, type: 3}
   miss_icon: {fileID: 21300000, guid: aaf45977f3d9d894c9f1c54fc05e7db3, type: 3}
-  inactive_icon: {fileID: 0}
+  inactive_icon: {fileID: 21300000, guid: 80be3b09a86bc0b409d70568ca23e940, type: 3}
 --- !u!1 &4999499626104394870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,7 +2316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4522519623492560367
 RectTransform:
   m_ObjectHideFlags: 0
