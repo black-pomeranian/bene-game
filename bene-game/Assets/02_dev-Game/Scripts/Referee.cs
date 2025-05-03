@@ -63,6 +63,9 @@ public class Referee : MonoBehaviour
 
     // コンポーネント参照
     private Camera mainCamera;
+    private CameraShaker cameraShaker;
+    private Coroutine shakeCoroutine;
+
     private Kicker kicker;
     private Keeper keeper;
     private Ball ball;
@@ -88,6 +91,7 @@ public class Referee : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
+        cameraShaker = mainCamera.GetComponent<CameraShaker>();
 
         // 初期状態を設定
         ChangeState(RefereeState.INIT);
@@ -167,7 +171,7 @@ public class Referee : MonoBehaviour
                 break;
             case RefereeState.STANDBY:
                 // キッカーシュート待ち
-                sePlayer.PlaWhistleSE();
+                sePlayer.PlayWhistleSE();
                 kicker.ChangeState(Kicker.KickerState.WAIT);
                 keeper.ChangeState(Keeper.KeeperState.WAIT);
                 break;
@@ -282,7 +286,7 @@ public class Referee : MonoBehaviour
             {
                 uiManager.SetResult("LOSE", playerScore, cpuScore);
             }
-            sePlayer.PlaGameEndSE();
+            sePlayer.PlayGameEndSE();
             GameEnd();
             ChangeState(RefereeState.INIT);
         }
@@ -302,7 +306,7 @@ public class Referee : MonoBehaviour
                 currentGameCount++;
                 break;
             case RefereeState.JUDGE:
-                // ゴールならUI演出など表示
+                StopCoroutine(shakeCoroutine);
                 break;
             case RefereeState.SCORE:
                 ResetGame();
@@ -340,7 +344,7 @@ public class Referee : MonoBehaviour
 
     private void HandleKicked(object sender, KickEventArgs e)
     {
-        sePlayer.PlaKickSE();
+        sePlayer.PlayKickSE();
 
         if(keeper != null && playerRule == PlayerRule.KICKER)
         {
@@ -367,6 +371,10 @@ public class Referee : MonoBehaviour
     public void NotifyGoal()
     {
         isGoal = true;
+
+        shakeCoroutine = StartCoroutine(cameraShaker.Shake(5.0f, 0.5f, 13f));
+        sePlayer.PlayApploudSE();
+
     }
 
     // スコア更新
