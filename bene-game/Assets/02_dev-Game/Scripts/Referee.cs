@@ -38,8 +38,24 @@ public class Referee : MonoBehaviour
     [SerializeField] private Transform keeperInitTransform;
     [SerializeField] private Transform keeperCameraTransform;
 
+    [Header("UIマネージャー")]
+    [SerializeField] private UIManager uiManager;
+
+    [Header("Player用変数")]
+    [SerializeField] private ScoreUIManager playerScoreUIManager;
+
+    [Header("CPU用変数")]
+    [SerializeField] private ScoreUIManager cpuScoreUIManager;
+
+    [Header("ボール用変数")]
     [SerializeField] private Ball ballObj;
     [SerializeField] private Transform ballInitTransform;
+
+    [Header("SEマネージャー")]
+    [SerializeField] private SePlayer sePlayer;
+
+    [Header("ゲーム設定用変数")]
+    [SerializeField] private float kickStartWaitTime = 1.0f;
 
 
     // 現在の状態
@@ -123,6 +139,7 @@ public class Referee : MonoBehaviour
                 ResetParameters();
                 break;
             case RefereeState.MAKE_CHARACTER:
+                currentTimer = 0.0f;
                 // 現在の役割と逆の役割にトグルしてから
                 if (playerRule == PlayerRule.KICKER)
                 {
@@ -136,9 +153,10 @@ public class Referee : MonoBehaviour
                     // 次のターンPlayerはKicker
                     playerRule = PlayerRule.KICKER;
                     kicker = Instantiate(kickerObj, kickerInitTransform.position, kickerInitTransform.rotation);
-                    kicker.OnKicked += HandleKicked;
                     keeper = Instantiate(keeperCpuObj, keeperInitTransform.position, keeperInitTransform.rotation);
                 }
+
+                kicker.OnKicked += HandleKicked;
 
                 ball = Instantiate(ballObj, ballInitTransform.position, ballInitTransform.rotation);
                 ball.Initialize();
@@ -149,6 +167,7 @@ public class Referee : MonoBehaviour
                 break;
             case RefereeState.STANDBY:
                 // キッカーシュート待ち
+                sePlayer.PlaWhistleSE();
                 kicker.ChangeState(Kicker.KickerState.WAIT);
                 keeper.ChangeState(Keeper.KeeperState.WAIT);
                 break;
@@ -188,7 +207,12 @@ public class Referee : MonoBehaviour
         }
 
         // カメラ移動が完了したら次へ
-        ChangeState(RefereeState.STANDBY);
+        if (kickStartWaitTime < currentTimer)
+        {
+            ChangeState(RefereeState.STANDBY);
+        }
+
+        currentTimer += Time.deltaTime;
     }
 
     private void UpdateStandbyState()
@@ -250,15 +274,16 @@ public class Referee : MonoBehaviour
         }
         else
         {
-            isGameStarted = false;
             if (playerScore > cpuScore)
             {
-                Debug.Log("WIN!!!");
+                uiManager.SetResult("WIN", playerScore, cpuScore);
             }
             else
             {
-                Debug.Log("LOSE");
+                uiManager.SetResult("LOSE", playerScore, cpuScore);
             }
+            sePlayer.PlaGameEndSE();
+            GameEnd();
             ChangeState(RefereeState.INIT);
         }
     }
@@ -290,11 +315,20 @@ public class Referee : MonoBehaviour
         isGameStarted = true;
     }
 
+    public void GameEnd()
+    {
+        isGameStarted = false;
+        uiManager.DisableGameUI();
+        uiManager.EnableEndUI();
+    }
+
 
     private void ResetParameters()
     {
         playerScore = 0;
         cpuScore = 0;
+        playerScoreUIManager.ResetScoreBord();
+        cpuScoreUIManager.ResetScoreBord();
 
         currentGameCount = 0;
 
@@ -306,6 +340,8 @@ public class Referee : MonoBehaviour
 
     private void HandleKicked(object sender, KickEventArgs e)
     {
+        sePlayer.PlaKickSE();
+
         if(keeper != null && playerRule == PlayerRule.KICKER)
         {
             // CPU用にキック情報をセットする
@@ -336,15 +372,30 @@ public class Referee : MonoBehaviour
     // スコア更新
     private void UpdateScores()
     {
+        // currentGameCountは1から開始。SetScoreは0から開始する。
+        int currentGameTurn = (int)((currentGameCount - 1) / 2);
         if (isGoal)
         {
             if(playerRule == PlayerRule.KICKER)
             {
                 playerScore++;
+                playerScoreUIManager.SetScore_Goal(currentGameTurn);
             }
             else
             {
                 cpuScore++;
+                cpuScoreUIManager.SetScore_Goal(currentGameTurn);
+            }
+        }
+        else
+        {
+            if (playerRule == PlayerRule.KICKER)
+            {
+                playerScoreUIManager.SetScore_Miss(currentGameTurn);
+            }
+            else
+            {
+                cpuScoreUIManager.SetScore_Miss(currentGameTurn);
             }
         }
     }
@@ -360,6 +411,11 @@ public class Referee : MonoBehaviour
         int playerRemainingShots = (totalTurnsPerTeam) - (currentGameCount + 1) / 2;
         int cpuRemainingShots = (totalTurnsPerTeam) - (currentGameCount / 2);
 
+        if (playerScore == cpuScore)
+        {
+            return true;
+        }
+
         if (playerScore > cpuScore + cpuRemainingShots)
         {
             return false; // プレイヤーの勝ち確定
@@ -371,7 +427,7 @@ public class Referee : MonoBehaviour
         }
 
         // 規定回数に達していて、かつ同点でなければ終了
-        if (currentGameCount >= totalTurnsPerGame && playerScore != cpuScore)
+        if ((currentGameCount >= totalTurnsPerGame) && (playerScore != cpuScore) && (currentGameCount%2 == 0))
         {
             return false; // 決着がついた
         }
