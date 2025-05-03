@@ -28,13 +28,13 @@ public class Referee : MonoBehaviour
 
     [Header("キッカー用変数")]
     [SerializeField] private Kicker kickerObj;
-    /* [SerializeField] private KickerCpu kikckerCpuObj; */
+    [SerializeField] private KickerCpu kickerCpuObj;
     [SerializeField] private Transform kickerInitTransform;
     [SerializeField] private Transform kickerCameraTransform;
 
     [Header("キーパー用変数")]
     [SerializeField] private Keeper keeperObj;
-    /* [SerializeField] private KeeperCpu keeperCpuObj; */
+    [SerializeField] private KeeperCpu keeperCpuObj;
     [SerializeField] private Transform keeperInitTransform;
     [SerializeField] private Transform keeperCameraTransform;
 
@@ -123,20 +123,21 @@ public class Referee : MonoBehaviour
                 ResetParameters();
                 break;
             case RefereeState.MAKE_CHARACTER:
-                // キッカーを決める
+                // 現在の役割と逆の役割にトグルしてから
                 if (playerRule == PlayerRule.KICKER)
                 {
+                    // 次のターンPlayerはKeeper
                     playerRule = PlayerRule.KEEPER;
-                    kicker = Instantiate(kickerObj, kickerInitTransform.position, kickerInitTransform.rotation);
-                    /* [TODO] KeeperCpuが作成でき次第差し替え */
+                    kicker = Instantiate(kickerCpuObj, kickerInitTransform.position, kickerInitTransform.rotation);
                     keeper = Instantiate(keeperObj, keeperInitTransform.position, keeperInitTransform.rotation);
                 }
                 else
                 {
+                    // 次のターンPlayerはKicker
                     playerRule = PlayerRule.KICKER;
-                    /* [TODO] KickerCpuが作成でき次第差し替え */
                     kicker = Instantiate(kickerObj, kickerInitTransform.position, kickerInitTransform.rotation);
-                    keeper = Instantiate(keeperObj, keeperInitTransform.position, keeperInitTransform.rotation);
+                    kicker.OnKicked += HandleKicked;
+                    keeper = Instantiate(keeperCpuObj, keeperInitTransform.position, keeperInitTransform.rotation);
                 }
 
                 ball = Instantiate(ballObj, ballInitTransform.position, ballInitTransform.rotation);
@@ -210,7 +211,7 @@ public class Referee : MonoBehaviour
         if (isGoal)
         {
             // GOAL演出表示
-            Debug.Log("GOAL!!!");
+            // Debug.Log("GOAL!!!");
         }
     }
 
@@ -292,6 +293,18 @@ public class Referee : MonoBehaviour
 
         currentTimer = 0.0f;
         isGoal = false;
+    }
+
+    private void HandleKicked(object sender, KickEventArgs e)
+    {
+        if(keeper != null && playerRule == PlayerRule.KICKER)
+        {
+            // CPU用にキック情報をセットする
+            /*SwipeDirection direction = (SwipeDirection)(Random.Range(0, (int)SwipeDirection.None));*/
+            SwipeDirection direction = SwipeDirection.Left;
+            float arrivalTime = 0.5f;
+            keeper.SetDiveInfoFromKick(direction, arrivalTime);
+        }
     }
 
     private void MoveCameraToPlayer(Transform targetTransform)

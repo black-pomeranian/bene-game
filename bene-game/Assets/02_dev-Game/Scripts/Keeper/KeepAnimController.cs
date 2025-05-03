@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class KeepAnimController : MonoBehaviour
 {
-    private Animator _animator;
+    [SerializeField] private Animator _animator;
     private float _height;
     private float _turn;
 
     // Start is called before the first frame update
     void Start()
     {
-        _animator = GetComponent<Animator>();
     }
 
     private void GetDiveParam(SwipeDirection diveDirection)
