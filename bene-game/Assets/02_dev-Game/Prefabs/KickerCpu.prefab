@@ -2531,6 +2531,7 @@ MonoBehaviour:
   kickForce: 0.1
   maxKickForce: 1000
   minKickForce: 300
+  errorOffsetScale: 6
   kickTargets:
   - direction: 0
     target: {fileID: 2491850593637822520}
