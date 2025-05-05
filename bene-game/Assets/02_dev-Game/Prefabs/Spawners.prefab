@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2982852696794763447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1645513940287764014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6939559281373975979}
+  m_Layer: 0
+  m_Name: KeeperCameraPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6939559281373975979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645513940287764014}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.08216775, y: -0, z: -0, w: 0.9966185}
+  m_LocalPosition: {x: 0, y: 11.4, z: -304.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2982852696794763447}
+  m_LocalEulerAnglesHint: {x: 9.426, y: 0, z: 0}
 --- !u!1 &1779925928838307478
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,37 +124,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2982852696794763447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4918625619567728410
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2869338448503641146}
-  m_Layer: 0
-  m_Name: KeeperCameraPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2869338448503641146
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4918625619567728410}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9862857, z: -0.16504757, w: 0}
-  m_LocalPosition: {x: -0.91, y: 26.9, z: -196.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2982852696794763447}
-  m_LocalEulerAnglesHint: {x: 19, y: 180, z: 0}
 --- !u!1 &6544431236370515924
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ Transform:
   - {fileID: 3083377510402897732}
   - {fileID: 6470262184237638982}
   - {fileID: 2768747269318773734}
-  - {fileID: 2869338448503641146}
+  - {fileID: 6939559281373975979}
   - {fileID: 854010698671719601}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c22a4deff7ac6d4ba663e368abca838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goalJudgeTime: 4
+  goalJudgeTime: 6
   gameTurn: 5
   kickerObj: {fileID: 5322968305912911056, guid: 5809ba2ac47fc5b49a6de4df5e164460, type: 3}
   kickerCpuObj: {fileID: -4446421399489391731, guid: f299c642325f24dda8cc965973f9c459, type: 3}

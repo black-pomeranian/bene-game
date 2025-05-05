@@ -51,8 +51,9 @@ public class Referee : MonoBehaviour
     [SerializeField] private Ball ballObj;
     [SerializeField] private Transform ballInitTransform;
 
-    [Header("SEマネージャー")]
+    [Header("音声マネージャー")]
     [SerializeField] private SePlayer sePlayer;
+    [SerializeField] private BgmPlayer bgmPlayer;
 
     [Header("ゲーム設定用変数")]
     [SerializeField] private float kickStartWaitTime = 1.0f;
@@ -151,6 +152,7 @@ public class Referee : MonoBehaviour
                     playerRule = PlayerRule.KEEPER;
                     kicker = Instantiate(kickerCpuObj, kickerInitTransform.position, kickerInitTransform.rotation);
                     keeper = Instantiate(keeperObj, keeperInitTransform.position, keeperInitTransform.rotation);
+                    uiManager.SetPanelSave();
                 }
                 else
                 {
@@ -158,6 +160,7 @@ public class Referee : MonoBehaviour
                     playerRule = PlayerRule.KICKER;
                     kicker = Instantiate(kickerObj, kickerInitTransform.position, kickerInitTransform.rotation);
                     keeper = Instantiate(keeperCpuObj, keeperInitTransform.position, keeperInitTransform.rotation);
+                    uiManager.SetPanelKick();
                 }
 
                 kicker.OnKicked += HandleKicked;
@@ -306,7 +309,10 @@ public class Referee : MonoBehaviour
                 currentGameCount++;
                 break;
             case RefereeState.JUDGE:
-                StopCoroutine(shakeCoroutine);
+                if (shakeCoroutine != null)
+                {
+                    StopCoroutine(shakeCoroutine);
+                }
                 break;
             case RefereeState.SCORE:
                 ResetGame();
@@ -324,6 +330,7 @@ public class Referee : MonoBehaviour
         isGameStarted = false;
         uiManager.DisableGameUI();
         uiManager.EnableEndUI();
+        bgmPlayer.PlayBGM(2);
     }
 
 
@@ -372,6 +379,7 @@ public class Referee : MonoBehaviour
     {
         isGoal = true;
 
+        kicker.IsGoal();
         shakeCoroutine = StartCoroutine(cameraShaker.Shake(5.0f, 0.5f, 13f));
         sePlayer.PlayApploudSE();
 
@@ -413,23 +421,24 @@ public class Referee : MonoBehaviour
     {
         int totalTurnsPerTeam = gameTurn;
         int totalTurnsPerGame = totalTurnsPerTeam * 2;
-        int remainingTurns = totalTurnsPerGame - currentGameCount;
 
         // 勝敗が確定しているかチェック（残り回数で逆転できない）
         int playerRemainingShots = (totalTurnsPerTeam) - (currentGameCount + 1) / 2;
         int cpuRemainingShots = (totalTurnsPerTeam) - (currentGameCount / 2);
+
+        Debug.Log("current Game Count:" + currentGameCount);
 
         if (playerScore == cpuScore)
         {
             return true;
         }
 
-        if (playerScore > cpuScore + cpuRemainingShots)
+        if ((currentGameCount < totalTurnsPerGame) && (playerScore > cpuScore + cpuRemainingShots))
         {
             return false; // プレイヤーの勝ち確定
         }
 
-        if (cpuScore > playerScore + playerRemainingShots)
+        if ((currentGameCount < totalTurnsPerGame) && (cpuScore > playerScore + playerRemainingShots))
         {
             return false; // CPUの勝ち確定
         }

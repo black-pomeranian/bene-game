@@ -30,4 +30,9 @@ public class KickAnimController : MonoBehaviour
             animator.SetBool("isStartKick", false);
         }
     }
+
+    public void SetIsGoal(bool flag)
+    {
+        animator.SetBool("isGoal", flag);
+    }
 }

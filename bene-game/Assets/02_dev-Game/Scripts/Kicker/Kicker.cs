@@ -136,8 +136,10 @@ public class Kicker : MonoBehaviour
                 break;
             case KickerState.GOAL:
                 // ゴール時のアニメーション再生
-                /*if (animator != null)
-                    animator.SetTrigger("Goal");*/
+                if (kickAnimController != null)
+                {
+                    kickAnimController.SetIsGoal(true);
+                }
                 break;
             case KickerState.NOGOAL:
                 // 失敗時のアニメーション再生
@@ -285,6 +287,10 @@ public class Kicker : MonoBehaviour
         watchCurrentTimer = 0.0f;
         aimVector3 = Vector3.zero;
         kickAnimController.StopKick();
+        if (kickAnimController != null)
+        {
+            kickAnimController.SetIsGoal(false);
+        }
     }
 
     private KickTarget FindClosestTarget(Vector2 screenPosition)
@@ -323,5 +329,10 @@ public class Kicker : MonoBehaviour
         {
             isTouchedBall = true;
         }
+    }
+
+    public void IsGoal()
+    {
+        isGoal = true;
     }
 }
