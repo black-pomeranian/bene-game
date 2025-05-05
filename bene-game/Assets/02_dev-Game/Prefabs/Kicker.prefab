@@ -2613,9 +2613,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   watchTime: 5
-  kickForce: 0.5
+  kickForce: 0.8
   maxKickForce: 1000
   minKickForce: 300
+  errorOffsetScale: 7.5
   kickTargets:
   - direction: 0
     target: {fileID: 2491850593637822520}

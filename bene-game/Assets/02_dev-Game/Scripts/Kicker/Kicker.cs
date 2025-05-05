@@ -31,6 +31,8 @@ public class Kicker : MonoBehaviour
     [SerializeField] public float kickForce = 0.1f;
     [SerializeField] public float maxKickForce = 1000f;
     [SerializeField] public float minKickForce = 300f;
+    // 誤差の適用係数（調整用）
+    [SerializeField] float errorOffsetScale = 6.0f;
     [SerializeField] public List<KickTarget> kickTargets = new List<KickTarget>();
 
     // 現在の状態
@@ -195,9 +197,24 @@ public class Kicker : MonoBehaviour
             
             // 最終的なキックベクトルの計算
             aimVector3 = directionToTarget * kickPower;
-            
+
+
+            // スワイプを離した位置からターゲットまでのずれを適用
+            // ターゲットのスクリーン座標
+            Vector2 targetScreenPos = Camera.main.WorldToScreenPoint(closestTarget.target.position);
+
+            // スワイプ終了位置とターゲットとのスクリーン上のズレ
+            Vector2 screenOffset = swipeEndPosition - targetScreenPos;
+
+            // ズレをワールド空間に変換（スクリーン → ワールド）
+            Vector3 offsetInWorld = Camera.main.ScreenToWorldPoint(new Vector3(swipeEndPosition.x, swipeEndPosition.y, Camera.main.WorldToScreenPoint(ball.rb.transform.position).z))
+                                  - Camera.main.ScreenToWorldPoint(new Vector3(targetScreenPos.x, targetScreenPos.y, Camera.main.WorldToScreenPoint(ball.rb.transform.position).z));
+
+            // キック方向に誤差を追加
+            aimVector3 += offsetInWorld * errorOffsetScale;
+
             // 中央下のターゲットの場合は、より平らな軌道に（ローボール）
-            
+
             if (closestTarget.direction == SwipeDirection.Left || closestTarget.direction == SwipeDirection.Right || closestTarget.direction == SwipeDirection.Down )
             {
                 aimVector3 = new Vector3(aimVector3.x, aimVector3.y*0.1f, aimVector3.z);
