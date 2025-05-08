@@ -221,7 +221,7 @@ public class Keeper : MonoBehaviour
             case KeeperState.WAIT:
                 break;
             case KeeperState.AIM:
-                break;
+                 break;
             case KeeperState.GUARD:
                 DiveExit();
                 break;
