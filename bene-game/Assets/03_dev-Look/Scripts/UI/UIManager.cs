@@ -15,6 +15,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textPlayerScore;
     [SerializeField] private TextMeshProUGUI textCpuScore;
 
+    [SerializeField] GameObject panelKick;
+    [SerializeField] GameObject panelSave;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -126,5 +129,17 @@ public class UIManager : MonoBehaviour
         {
             Debug.LogWarning($"•s–¾‚Èresult’l: {result}");
         }
+    }
+
+    public void SetPanelKick()
+    {
+        panelKick.gameObject.SetActive(true);
+        panelSave.gameObject.SetActive(false);
+    }
+
+    public void SetPanelSave()
+    {
+        panelKick.gameObject.SetActive(false);
+        panelSave.gameObject.SetActive(true);
     }
 }

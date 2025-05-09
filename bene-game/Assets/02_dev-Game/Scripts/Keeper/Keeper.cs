@@ -44,6 +44,7 @@ public class Keeper : MonoBehaviour
 
     // KEEP状態用変数
     public SwipeDirection diveDirection { get; set; }
+    public bool isKeeperTouched { get; private set; }
     private Vector2 swipeStartPosition;
     private Vector2 swipeEndPosition;
     private Vector3 diveStartPosition;
@@ -220,7 +221,7 @@ public class Keeper : MonoBehaviour
             case KeeperState.WAIT:
                 break;
             case KeeperState.AIM:
-                break;
+                 break;
             case KeeperState.GUARD:
                 DiveExit();
                 break;
@@ -239,6 +240,8 @@ public class Keeper : MonoBehaviour
         /* 位置の初期化 */
         this.transform.position = initPosition;
         this.transform.eulerAngles = initRotation;
+
+        isKeeperTouched = false;
 
         /* クラス固有パラメーターの初期化 */
         swipeStartPosition = Vector2.zero;
@@ -353,5 +356,13 @@ public class Keeper : MonoBehaviour
     public KeeperState GetCurrentState()
     {
         return currentState;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ball"))
+        {
+            isKeeperTouched = true;
+        }
     }
 }

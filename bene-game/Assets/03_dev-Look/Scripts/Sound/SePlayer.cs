@@ -31,19 +31,28 @@ public class SePlayer : MonoBehaviour
         seSource.PlayOneShot(seClips[0]);
     }
 
-    public void PlaWhistleSE()
+    public void PlayWhistleSE()
     {
         seSource.PlayOneShot(seClips[1]);
     }
 
-    public void PlaKickSE()
+    public void PlayKickSE()
     {
         seSource.PlayOneShot(seClips[2]);
     }
 
-    public void PlaGameEndSE()
+    public void PlayGameEndSE()
     {
         seSource.PlayOneShot(seClips[3]);
     }
 
+    public void PlayApploudSE()
+    {
+        seSource.PlayOneShot(seClips[4]);
+    }
+
+    public void PlayMissSE()
+    {
+        seSource.PlayOneShot(seClips[5]);
+    }
 }
