@@ -51,4 +51,8 @@ public class SePlayer : MonoBehaviour
         seSource.PlayOneShot(seClips[4]);
     }
 
+    public void PlayMissSE()
+    {
+        seSource.PlayOneShot(seClips[5]);
+    }
 }

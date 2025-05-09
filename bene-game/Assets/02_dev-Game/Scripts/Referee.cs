@@ -86,6 +86,7 @@ public class Referee : MonoBehaviour
 
     // フラグ
     private bool isGoal = false;
+    private bool isPlayerKickerMissed = false;
     private bool isGameStarted = false;
 
     // スタート時の初期化
@@ -180,6 +181,7 @@ public class Referee : MonoBehaviour
                 break;
             case RefereeState.JUDGE:
                 // ボール挙動時間計測開始
+                isPlayerKickerMissed = false;
                 currentTimer = 0.0f;
                 isGoal = false;
                 break;
@@ -244,6 +246,14 @@ public class Referee : MonoBehaviour
         if (keeper.isKeeperTouched && playerRule == PlayerRule.KEEPER && !isGoal)
         {
             PlayApploud();
+        }
+        else if (keeper.isKeeperTouched && playerRule == PlayerRule.KICKER && !isGoal)
+        {
+            if (!isPlayerKickerMissed)
+            {
+                isPlayerKickerMissed = true;
+                sePlayer.PlayMissSE();
+            }
         }
 
         // ボール挙動時間超過またはゴールしたら
@@ -390,6 +400,10 @@ public class Referee : MonoBehaviour
         if (playerRule == PlayerRule.KICKER)
         {
             PlayApploud();
+        }
+        else
+        {
+            sePlayer.PlayMissSE();
         }
 
     }

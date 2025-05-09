@@ -51,6 +51,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 91ad4299a20fb4945b872327a34b4a44, type: 3}
   - {fileID: 8300000, guid: 350c0f99132f1c04dbcf6576e11e4799, type: 3}
   - {fileID: 8300000, guid: d2399162382f72e4d947320e2fd7e68d, type: 3}
+  - {fileID: 8300000, guid: b97a9c9e51965314fad1f1161e555ef4, type: 3}
   seSource: {fileID: 7221267778341328999}
 --- !u!82 &7221267778341328999
 AudioSource:
@@ -64,7 +65,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.775
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -309,7 +310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7227098178560010981
 Transform:
   m_ObjectHideFlags: 0
