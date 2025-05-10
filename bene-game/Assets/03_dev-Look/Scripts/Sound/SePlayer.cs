@@ -10,6 +10,8 @@ public class SePlayer : MonoBehaviour
 
     public void PlaySE(int seIndex)
     {
+        if(!gameObject.activeInHierarchy) return;
+
         if (seClips == null || seClips.Length == 0 || seIndex < 0 || seIndex >= seClips.Length)
         {
             Debug.LogError("éwíËÇ≥ÇÍÇΩå¯â âπÇ™ë∂ç›ÇµÇ‹ÇπÇÒÅB");
@@ -28,31 +30,37 @@ public class SePlayer : MonoBehaviour
 
     public void PlaySelectSE()
     {
+        if (!gameObject.activeInHierarchy) return;
         seSource.PlayOneShot(seClips[0]);
     }
 
     public void PlayWhistleSE()
     {
+        if (!gameObject.activeInHierarchy) return;
         seSource.PlayOneShot(seClips[1]);
     }
 
     public void PlayKickSE()
     {
+        if (!gameObject.activeInHierarchy) return;
         seSource.PlayOneShot(seClips[2]);
     }
 
     public void PlayGameEndSE()
     {
+        if (!gameObject.activeInHierarchy) return;
         seSource.PlayOneShot(seClips[3]);
     }
 
     public void PlayApploudSE()
     {
+        if (!gameObject.activeInHierarchy) return;
         seSource.PlayOneShot(seClips[4]);
     }
 
     public void PlayMissSE()
     {
+        if (!gameObject.activeInHierarchy) return;
         seSource.PlayOneShot(seClips[5]);
     }
 }
