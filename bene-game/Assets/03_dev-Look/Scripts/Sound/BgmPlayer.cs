@@ -12,6 +12,7 @@ public class BgmPlayer : MonoBehaviour
 
     public void PlayBGM(int bgmIndex)
     {
+
         if (bgmClips == null || bgmClips.Length == 0 || bgmIndex < 0 || bgmIndex >= bgmClips.Length)
         {
             Debug.LogError("éwíËÇ≥ÇÍÇΩBGMÇ™ë∂ç›ÇµÇ‹ÇπÇÒÅB");
@@ -24,7 +25,10 @@ public class BgmPlayer : MonoBehaviour
         }
 
         bgmSource.clip = bgmClips[bgmIndex];
-        bgmSource.Play();
+        if (gameObject.activeInHierarchy)
+        {
+            bgmSource.Play();
+        }
         currentBgmIndex = bgmIndex;
     }
 

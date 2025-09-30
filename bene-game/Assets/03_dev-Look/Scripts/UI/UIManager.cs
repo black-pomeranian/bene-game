@@ -18,6 +18,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject panelKick;
     [SerializeField] GameObject panelSave;
 
+    [SerializeField] private float idleTimeToPlayVideo = 30f;
+    [SerializeField] private GameObject videoPlayerObj;
+
+    [SerializeField] private BgmPlayer bgm_player;
+
+    private float idleTimer = 0f;
+    private bool isVideoPlaying = false;
+    private Vector3 lastMousePosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +35,37 @@ public class UIManager : MonoBehaviour
         DisableGameUI();
         DisableEndUI();
         EnableSoundUI();
+
+        var vp = videoPlayerObj.GetComponent<UnityEngine.Video.VideoPlayer>();
+        if (vp != null)
+        {
+            vp.loopPointReached += OnIdleVideoFinished;
+        }
+    }
+
+    private void Update()
+    {
+        if (startUI.activeSelf && !isVideoPlaying)
+        {
+            if (IsAnyInputDetected())
+            {
+                idleTimer = 0f;
+            }
+            else
+            {
+                idleTimer += Time.deltaTime;
+                if (idleTimer >= idleTimeToPlayVideo)
+                {
+                    PlayIdleVideo();
+                }
+            }
+        }
+
+        // “®‰æÄ¶’†‚É“ü—Í‚ª‚ ‚ê‚Î’†’f
+        if (isVideoPlaying && IsAnyInputDetected())
+        {
+            StopIdleVideo();
+        }
     }
 
     public void EnableStartUI()
@@ -141,5 +181,51 @@ public class UIManager : MonoBehaviour
     {
         panelKick.gameObject.SetActive(false);
         panelSave.gameObject.SetActive(true);
+    }
+
+    private bool IsAnyInputDetected()
+    {
+        bool mouseMoved = Input.mousePosition != lastMousePosition;
+        lastMousePosition = Input.mousePosition;
+
+        return Input.anyKeyDown || Input.mouseScrollDelta.sqrMagnitude > 0 ||
+            Input.GetMouseButtonDown(0) || Input.touchCount > 0 || mouseMoved;
+    }
+
+    private void PlayIdleVideo()
+    {
+        isVideoPlaying = true;
+        videoPlayerObj.SetActive(true);
+        var vp = videoPlayerObj.GetComponent<UnityEngine.Video.VideoPlayer>();
+        if (vp != null)
+        {
+            vp.Play();
+        }
+
+        bgm_player.StopBGM();
+        DisableStartUI();
+
+    }
+
+    private void StopIdleVideo()
+    {
+        isVideoPlaying = false;
+        idleTimer = 0f;
+
+        var vp = videoPlayerObj.GetComponent<UnityEngine.Video.VideoPlayer>();
+        if (vp != null)
+        {
+            vp.Stop();
+        }
+
+        videoPlayerObj.SetActive(false);
+
+        bgm_player.PlayBGM(0);
+        EnableStartUI();
+    }
+
+    private void OnIdleVideoFinished(UnityEngine.Video.VideoPlayer vp)
+    {
+        StopIdleVideo();
     }
 }
