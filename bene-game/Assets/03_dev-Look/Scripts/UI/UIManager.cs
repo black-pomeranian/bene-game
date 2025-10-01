@@ -6,6 +6,7 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject startUI;
+    [SerializeField] private GameObject selectUI;
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject endUI;
     [SerializeField] private GameObject soundUI;
@@ -32,6 +33,7 @@ public class UIManager : MonoBehaviour
     {
         // 初期状態としてStartUIのみアクティブにする例
         EnableStartUI();
+        DisableSelectUI();  
         DisableGameUI();
         DisableEndUI();
         EnableSoundUI();
@@ -85,6 +87,26 @@ public class UIManager : MonoBehaviour
         if (startUI != null)
         {
             startUI.SetActive(false);
+        }
+    }
+
+    public void EnableSelectUI()
+    {
+        if (selectUI != null)
+        {
+            selectUI.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("selectUIオブジェクトがアサインされていません。");
+        }
+    }
+
+    public void DisableSelectUI()
+    {
+        if (selectUI != null)
+        {
+            selectUI.SetActive(false);
         }
     }
 
