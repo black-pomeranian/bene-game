@@ -145,6 +145,7 @@ public class Referee : MonoBehaviour
                 ResetParameters();
                 break;
             case RefereeState.MAKE_CHARACTER:
+                SwipeUtility.CursorDisappear();
                 currentTimer = 0.0f;
                 // Œ»İ‚Ì–ğŠ„‚Æ‹t‚Ì–ğŠ„‚ÉƒgƒOƒ‹‚µ‚Ä‚©‚ç
                 if (playerRule == PlayerRule.KICKER)

@@ -28,7 +28,7 @@ public class Keeper : MonoBehaviour
     [SerializeField] private float diveDistWeight = 5.0f;
     [SerializeField] private AnimationCurve easeCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     [SerializeField] private List<SwipeMoveOffset> swipeMoveOffsets = new List<SwipeMoveOffset>();
-    [SerializeField] private bool isSideRevert = true;
+    [SerializeField] protected bool isSideRevert = true;
 
 
     // Œ»İ‚Ìó‘Ô
@@ -253,7 +253,7 @@ public class Keeper : MonoBehaviour
     }
 
     // •ûŒü‚ğ‹t‚É‚·‚é
-    private SwipeDirection RevertDirection(SwipeDirection direction)
+    public SwipeDirection RevertDirection(SwipeDirection direction)
     {
         if (diveDirection == SwipeDirection.Left)
         {

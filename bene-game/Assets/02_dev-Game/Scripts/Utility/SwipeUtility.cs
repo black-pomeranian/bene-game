@@ -14,7 +14,7 @@ public enum SwipeDirection
 public static class SwipeUtility
 {
     // スワイプ方向を判定するための最小距離（これより短いスワイプは無視）
-    private const float MIN_SWIPE_DISTANCE = 20f;
+    private const float MIN_SWIPE_DISTANCE = 10f;
 
     /// <summary>
     /// スワイプの開始位置と終了位置から方向を判定する
@@ -115,4 +115,21 @@ public static class SwipeUtility
 
         return SwipeDirection.None;
     }
+
+    public static void CursorDisappear()
+    {
+        Cursor.visible = false;
+
+        // ゲーム画面内にロック
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public static void CursorAppear()
+    {
+        Cursor.visible = true;
+
+        // ゲーム画面内にロック解除
+        Cursor.lockState = CursorLockMode.None;
+    }
+
 }

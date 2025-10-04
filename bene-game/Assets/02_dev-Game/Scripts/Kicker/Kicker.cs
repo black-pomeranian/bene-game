@@ -27,7 +27,7 @@ public class Kicker : MonoBehaviour
     }
 
     // シリアライザブル
-    [SerializeField] private float watchTime = 5.0f;
+    [SerializeField] public float watchTime = 5.0f;
     [SerializeField] public float kickForce = 0.1f;
     [SerializeField] public float maxKickForce = 1000f;
     [SerializeField] public float minKickForce = 300f;
@@ -51,7 +51,7 @@ public class Kicker : MonoBehaviour
     public Vector3 aimVector3 {get; set;}
     private Vector2 swipeStartPosition;
     private Vector2 swipeEndPosition;
-    private float swipeStartTime;
+    protected float swipeStartTime;
     private float swipeEndTime;
     private bool isTouchedBall;
 
@@ -267,7 +267,7 @@ public class Kicker : MonoBehaviour
     }
 
     // 状態から抜けるときの処理
-    private void ExitState(KickerState state)
+    protected virtual void ExitState(KickerState state)
     {
         switch (state)
         {
