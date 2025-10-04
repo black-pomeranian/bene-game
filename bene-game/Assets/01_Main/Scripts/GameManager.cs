@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour
         }
 
         CurrentState = newState;
-        Debug.Log("ƒQ[ƒ€ó‘Ô‚ª‘JˆÚ‚µ‚Ü‚µ‚½: " + CurrentState);
 
         // ‚±‚±‚Åó‘Ô‚É‰‚¶‚½ˆ—‚ğ‹Lq‚Å‚«‚Ü‚·
         switch (CurrentState)

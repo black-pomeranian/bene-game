@@ -49,8 +49,8 @@ public class Kicker : MonoBehaviour
 
     // KICKèÛë‘ópïœêî    
     public Vector3 aimVector3 {get; set;}
-    private Vector2 swipeStartPosition;
-    private Vector2 swipeEndPosition;
+    protected Vector2 swipeStartPosition;
+    protected Vector2 swipeEndPosition;
     protected float swipeStartTime;
     private float swipeEndTime;
     private bool isTouchedBall;

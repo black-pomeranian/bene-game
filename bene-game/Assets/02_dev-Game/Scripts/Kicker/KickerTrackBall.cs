@@ -7,11 +7,13 @@ public class KickerTrackBall : Kicker
 {
     // シリアライザブル
     [SerializeField] private float moveThreshold = 50f;
-    [SerializeField] private float heightScale = 0.1f;
+    [SerializeField] private float minWidth = -10.0f;
+    [SerializeField] private float maxWidth = 10.0f;
+    [SerializeField] private float xSensitivity = 0.5f;
     [SerializeField] private float minHeight = 0.1f;
     [SerializeField] private float maxHeight = 1.5f;
+    [SerializeField] private float heightSensitivity = 0.1f;
     [SerializeField] private float timingCycle = 2f;
-    [SerializeField] private float xSensitivity = 0.5f;
     [SerializeField] private GameObject timingCircle;
     [SerializeField] private GameObject stoppingCircle;
 
@@ -71,15 +73,18 @@ public class KickerTrackBall : Kicker
             float elapsed = Time.time - swipeStartTime;
             float swipeSpeed = accumulatedDelta.magnitude / (elapsed + 0.001f);
 
-            Vector2 adjustedDelta = new Vector2(-accumulatedDelta.x * xSensitivity,
-                                                -accumulatedDelta.y);
+            float adjustedDelta_x = Mathf.Clamp(-accumulatedDelta.x * xSensitivity, minWidth, maxWidth);
+            float adjustedDelta_z = -accumulatedDelta.y;
 
-            Vector3 direction = new Vector3(adjustedDelta.x, 0, adjustedDelta.y).normalized;
-            if (direction.z > 0) direction.z = -0.001f;
+            Debug.Log("accumulatedDelta_x: " + -accumulatedDelta.x);
+            Debug.Log("adjustedDelta_x: " + adjustedDelta_x);
+
+            Vector3 direction = new Vector3(adjustedDelta_x, 0, adjustedDelta_z).normalized;
+            if (direction.z > 0) direction.z = -0.1f;
 
             direction.Normalize();
 
-            float heightFactor = Mathf.Clamp(swipeSpeed * heightScale, minHeight, maxHeight);
+            float heightFactor = Mathf.Clamp(swipeSpeed * heightSensitivity, minHeight, maxHeight);
 
             float timingMultiplier = GetTimingMultiplier();
 

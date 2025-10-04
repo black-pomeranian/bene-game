@@ -2706,12 +2706,14 @@ MonoBehaviour:
     target: {fileID: 5157461727527360426}
   - direction: 5
     target: {fileID: 4904351214086853597}
-  moveThreshold: 10
-  heightScale: 0.05
-  minHeight: -10
-  maxHeight: 0.4
-  timingCycle: 2
+  moveThreshold: 20
+  minWidth: -6
+  maxWidth: 6
   xSensitivity: 0.3
+  minHeight: -15
+  maxHeight: 0.2
+  heightSensitivity: 0.1
+  timingCycle: 2
   timingCircle: {fileID: 6579485854946715837}
   stoppingCircle: {fileID: 7229340505104435943}
 --- !u!65 &7662715088663863218
