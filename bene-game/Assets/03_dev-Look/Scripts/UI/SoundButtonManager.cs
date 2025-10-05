@@ -8,7 +8,7 @@ public class SoundButtonManager : MonoBehaviour
     [SerializeField] Sprite soundOffSprite;
     [SerializeField] GameObject sound;
 
-    private bool isSoundOn = false;
+    private bool isSoundOn = true;
     private Button button;
 
     void Start()

@@ -347,12 +347,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 9071830090306039948, guid: c383cd293bbcc674586a1298290d7738, type: 3}
+    - target: {fileID: 3163769037429962539, guid: c383cd293bbcc674586a1298290d7738, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7156202731972896095}
-    - target: {fileID: 9071830090306039948, guid: c383cd293bbcc674586a1298290d7738, type: 3}
+    - target: {fileID: 3163769037429962539, guid: c383cd293bbcc674586a1298290d7738, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1461240264432557795}
+    - target: {fileID: 6415020369172916027, guid: c383cd293bbcc674586a1298290d7738, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1461240264432557796}
+    - target: {fileID: 7348375358119064447, guid: c383cd293bbcc674586a1298290d7738, type: 3}
+      propertyPath: bgm_player
       value: 
       objectReference: {fileID: 1461240264432557795}
     m_RemovedComponents: []
@@ -533,6 +541,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9aa1419bae3784a8c6877dfa669f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1461240264432557796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2955578108151862763, guid: 59b7e03d65c6e614b8bad9bea703cb4b, type: 3}
+  m_PrefabInstance: {fileID: 1461240264432557794}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6434950135922283718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -613,6 +626,10 @@ PrefabInstance:
       propertyPath: sePlayer
       value: 
       objectReference: {fileID: 6712855301180820460}
+    - target: {fileID: 1643737573611749483, guid: 3222a4319ebd696428ddfc758dc57bfc, type: 3}
+      propertyPath: bgmPlayer
+      value: 
+      objectReference: {fileID: 1461240264432557795}
     - target: {fileID: 1643737573611749483, guid: 3222a4319ebd696428ddfc758dc57bfc, type: 3}
       propertyPath: uiManager
       value: 

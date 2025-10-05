@@ -145,6 +145,7 @@ public class Referee : MonoBehaviour
                 ResetParameters();
                 break;
             case RefereeState.MAKE_CHARACTER:
+                SwipeUtility.CursorDisappear();
                 currentTimer = 0.0f;
                 // 現在の役割と逆の役割にトグルしてから
                 if (playerRule == PlayerRule.KICKER)
@@ -240,7 +241,6 @@ public class Referee : MonoBehaviour
         if (isGoal)
         {
             // GOAL演出表示
-            // Debug.Log("GOAL!!!");
         }
 
         if (keeper.isKeeperTouched && playerRule == PlayerRule.KEEPER && !isGoal)
@@ -292,7 +292,6 @@ public class Referee : MonoBehaviour
         // 次のラウンドへ
         if (ShouldContinueGame())
         {
-            Debug.Log("PLAYER vs CPU: " + playerScore + " | " + cpuScore);
             ChangeState(RefereeState.MAKE_CHARACTER);
         }
         else
@@ -345,6 +344,7 @@ public class Referee : MonoBehaviour
     public void GameEnd()
     {
         isGameStarted = false;
+        SwipeUtility.CursorAppear();
         uiManager.DisableGameUI();
         uiManager.EnableEndUI();
         bgmPlayer.PlayBGM(2);
@@ -456,7 +456,6 @@ public class Referee : MonoBehaviour
         int playerRemainingShots = (totalTurnsPerTeam) - (currentGameCount + 1) / 2;
         int cpuRemainingShots = (totalTurnsPerTeam) - (currentGameCount / 2);
 
-        Debug.Log("current Game Count:" + currentGameCount);
 
         if (playerScore == cpuScore)
         {
