@@ -1,36 +1,41 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class KickerTrackBall : Kicker
 {
-    // �V���A���C�U�u��
+    // シリアライザブル
     [SerializeField] private float moveThreshold = 50f;
-    [SerializeField] private float minWidth = -10.0f;
-    [SerializeField] private float maxWidth = 10.0f;
+    [SerializeField] private float inputAngleRange = 120f;
+    [SerializeField] private float maxAngle = 30f;
     [SerializeField] private float xSensitivity = 0.5f;
     [SerializeField] private float minHeight = 0.1f;
     [SerializeField] private float maxHeight = 1.5f;
     [SerializeField] private float heightSensitivity = 0.1f;
     [SerializeField] private float timingCycle = 2f;
+    [SerializeField] private float justTiming = 0.3f;
     [SerializeField] private GameObject timingCircle;
+    [SerializeField] private GameObject justCircle;
     [SerializeField] private GameObject stoppingCircle;
 
     private Vector2 accumulatedDelta;
     private float timingValue;
 
-    // ��Ԃɓ���Ƃ��̏���
+    // 状態に入るときの処理
     protected override void EnterState(KickerState state)
     {
         if (state == KickerState.STANDBY)
         {
             timingCircle.SetActive(false);
+            justCircle.SetActive(false);
             stoppingCircle.SetActive(false);
         }
         else if (state == KickerState.AIM)
         {
             timingCircle.SetActive(true);
+            justCircle.SetActive(true);
+            justCircle.GetComponent<RectTransform>().localScale = Vector3.one * justTiming;
             accumulatedDelta = Vector2.zero;
             swipeStartTime = Time.time;
         }
@@ -48,21 +53,22 @@ public class KickerTrackBall : Kicker
         else if (state == KickerState.KICK)
         {
             stoppingCircle.SetActive(false);
+            justCircle.SetActive(false);
         }
         base.ExitState(state);
     }
 
-    // WAIT��Ԃ̍X�V
+    // WAIT状態の更新
     protected override void UpdateWaitState()
     {
-        // �Ƃ肠���������҂����ɑJ��
+        // とりあえず何も待たずに遷移
         ChangeState(KickerState.AIM);
     }
 
-    // AIM��Ԃ̍X�V
+    // AIM状態の更新
     protected override void UpdateAimState()
     {
-        // �g���b�N�{�[�����́i�}�E�X�ړ��ʁj
+        // トラックボール入力（マウス移動量）
         Vector2 delta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         accumulatedDelta += delta;
 
@@ -73,19 +79,21 @@ public class KickerTrackBall : Kicker
             float elapsed = Time.time - swipeStartTime;
             float swipeSpeed = accumulatedDelta.magnitude / (elapsed + 0.001f);
 
-            float adjustedDelta_x = Mathf.Clamp(-accumulatedDelta.x * xSensitivity, minWidth, maxWidth);
-            float adjustedDelta_z = -accumulatedDelta.y;
+            // 入力ベクトル
+            Vector3 inputDir = new Vector3(-accumulatedDelta.x * xSensitivity, 0, -accumulatedDelta.y * xSensitivity);
 
-            Debug.Log("accumulatedDelta_x: " + -accumulatedDelta.x);
-            Debug.Log("adjustedDelta_x: " + adjustedDelta_x);
+            // 入力方向の角度を取得
+            float inputAngle = Vector3.SignedAngle(Vector3.back, inputDir.normalized, Vector3.up);
 
-            Vector3 direction = new Vector3(adjustedDelta_x, 0, adjustedDelta_z).normalized;
-            if (direction.z > 0) direction.z = -0.1f;
+            // 入力角度（±inputAngleRange）→ ゲーム角度（±maxAngle）にマッピング
+            float normalized = Mathf.Clamp(inputAngle / inputAngleRange, -1f, 1f); // -1〜1 に正規化
+            float mappedAngle = normalized * maxAngle; // ±maxAngle にスケーリング
 
-            direction.Normalize();
+            // 方向ベクトルを生成
+            Vector3 direction = Quaternion.Euler(0, mappedAngle, 0) * Vector3.back;
 
+            // 高さ・速度計算
             float heightFactor = Mathf.Clamp(swipeSpeed * heightSensitivity, minHeight, maxHeight);
-
             float timingMultiplier = GetTimingMultiplier();
 
             aimVector3 = new Vector3(direction.x, heightFactor, direction.z) * timingMultiplier;
@@ -98,7 +106,10 @@ public class KickerTrackBall : Kicker
     {
         float t = Mathf.Repeat(Time.time / timingCycle, 1f);
 
-        timingValue = Mathf.Lerp(1f, 0.2f, t);
+        // 二次曲線（Ease In）: ゆっくり始まって速く縮む
+        float curvedT = t * t;
+
+        timingValue = Mathf.Lerp(1.6f, 0.2f, curvedT);
 
         if (timingCircle != null)
         {
@@ -108,7 +119,7 @@ public class KickerTrackBall : Kicker
 
     private float GetTimingMultiplier()
     {
-        float diff = Mathf.Abs(timingValue - 0.5f);
+        float diff = Mathf.Abs(timingValue - justTiming);
         return Mathf.Lerp(maxKickForce, minKickForce, diff * 2f);
     }
 }
