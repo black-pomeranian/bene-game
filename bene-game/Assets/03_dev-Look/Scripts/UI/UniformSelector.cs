@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Linq; // List操作のためにLinqを追加
 
 public class UniformSelector : MonoBehaviour
 {
@@ -37,8 +38,17 @@ public class UniformSelector : MonoBehaviour
     // 選択されたパターンのインデックス (0:左, 1:中央, 2:右)
     private int selectedIndex = 1;
 
+    // selectedIndexが変化したことを検出するための前回の選択インデックス
+    private int previousSelectedIndex = 1;
+
+    // GetSelectedIndexで選ばれなかった、CPU側が選択すると想定されるインデックス
+    private int cpuIndex = -1;
+
     // 元のスケールを保持するためのリスト
     private List<Vector3> originalScales = new List<Vector3>();
+
+    // Canvasコンポーネネントをキャッシュするためのリスト
+    private List<Canvas> targetCanvases = new List<Canvas>(3);
 
     // スクリプトの初期化
     void Start()
@@ -50,14 +60,30 @@ public class UniformSelector : MonoBehaviour
             return;
         }
 
-        // 全てのImageの元のローカルスケールを保存
+        // 全てのImageの元のローカルスケールを保存し、Canvasコンポーネネントを取得
         foreach (var img in targetImages)
         {
             originalScales.Add(img.transform.localScale);
+
+            // Imageと同じGameObjectに付いているCanvasコンポーネントを取得
+            Canvas canvas = img.GetComponent<Canvas>();
+            if (canvas == null)
+            {
+                Debug.LogError($"Image '{img.name}' に Canvas コンポーネントが見つかりませんでした。Sorting Orderの制御にはCanvasが必要です。");
+                enabled = false;
+                return;
+            }
+
+            // Sorting Orderを個別に制御するため、Override Sortingを有効にする
+            canvas.overrideSorting = true;
+            targetCanvases.Add(canvas);
         }
 
         // 初期の状態 (中央が選択されている状態) を反映させる
         UpdateUIScales();
+
+        // 初期のselectedIndexに基づいて、CPUインデックスも初期化する
+        UpdateCPUIndex();
     }
 
     // 毎フレーム実行される更新処理
@@ -77,17 +103,25 @@ public class UniformSelector : MonoBehaviour
             accumulatedRight += Mathf.Abs(mouseX);
         }
 
+        previousSelectedIndex = selectedIndex; // 現在の選択インデックスを保存
+
         // 2. 累積値に基づいてインデックスを分類
         UpdateClassification();
 
-        // 3. UIのサイズを更新
+        // 3. selectedIndexが更新されたかチェックし、CPUインデックスを更新する
+        if (selectedIndex != previousSelectedIndex)
+        {
+            UpdateCPUIndex();
+        }
+
+        // 4. UIのサイズとSorting Orderを更新
         UpdateUIScales();
 
-        // 4. 累積値が閾値を超えたらリセット
+        // 5. 累積値が閾値を超えたらリセット
         CheckAndResetAccumulation();
 
-        // デバッグログ
-        // Debug.Log($"L: {accumulatedLeft:F2}, R: {accumulatedRight:F2}, Selected: {GetClassificationName(selectedIndex)} ({selectedIndex})");
+        // デバッグログ (GetCPUIndexの動作確認用)
+        // Debug.Log($"Selected: {selectedIndex}, CPU: {cpuIndex}");
     }
 
     // 累積値に基づいてインデックスを分類するメソッド
@@ -107,8 +141,6 @@ public class UniformSelector : MonoBehaviour
         float ratioRight = accumulatedRight / totalAccumulation;
 
         // 中央の割合は、左右の偏りが少ない場合に大きくなるように定義
-        // 例：左右が 0.5 の場合、中央の割合は 1.0 になる。 
-        // 左右が 1.0/0.0 の場合、中央の割合は 0.0 になる。
         float ratioCenter = 1f - Mathf.Abs(ratioLeft - ratioRight);
 
         // 中央の重みは、ユーザー設定のcenterBiasで調整可能にする
@@ -132,30 +164,66 @@ public class UniformSelector : MonoBehaviour
         }
     }
 
-    // UIのスケールを更新するメソッド
+    /// <summary>
+    /// selectedIndex以外のインデックスからランダムに1つ選び、cpuIndexを更新します。
+    /// selectedIndexが更新されたときにのみ呼び出されます。
+    /// </summary>
+    void UpdateCPUIndex()
+    {
+        // 0, 1, 2 のインデックスリスト
+        List<int> allIndices = new List<int> { 0, 1, 2 };
+
+        // selectedIndex を除いた残りのインデックスのリスト
+        List<int> availableIndices = allIndices.Where(i => i != selectedIndex).ToList();
+
+        // 残りのインデックスからランダムに1つを選択
+        if (availableIndices.Count > 0)
+        {
+            int randomIndex = Random.Range(0, availableIndices.Count); // 0 or 1
+            cpuIndex = availableIndices[randomIndex];
+        }
+        else
+        {
+            // 発生しないはずだが、念のため
+            cpuIndex = -1;
+        }
+    }
+
+    // UIのスケールとSorting Orderを更新するメソッド
     void UpdateUIScales()
     {
         for (int i = 0; i < targetImages.Count; i++)
         {
             Vector3 targetScale;
+            int targetSortingOrder;
 
             if (i == selectedIndex)
             {
-                // 現在選択されている要素は拡大
+                // 現在選択されている要素は拡大し、Sorting Orderを3にする
                 targetScale = originalScales[i] * scaleFactor;
+                targetSortingOrder = 3; // 選択されたImageを前面に
             }
             else
             {
-                // それ以外の要素は元のサイズ
+                // それ以外の要素は元のサイズに戻し、Sorting Orderを2にする
                 targetScale = originalScales[i];
+                targetSortingOrder = 2; // 非選択のImageを背面に
             }
 
+            // === 1. スケールの変更 (既存の処理) ===
             // Lerp（線形補間）を使ってスムーズにサイズを変更
             targetImages[i].transform.localScale = Vector3.Lerp(
                 targetImages[i].transform.localScale,
                 targetScale,
                 Time.deltaTime * transitionSpeed
             );
+
+            // === 2. Canvas Sorting Order の変更 (追加した処理) ===
+            if (targetCanvases[i] != null)
+            {
+                // Sorting Orderを設定
+                targetCanvases[i].sortingOrder = targetSortingOrder;
+            }
         }
     }
 
@@ -167,8 +235,6 @@ public class UniformSelector : MonoBehaviour
             // 累積値を合計でリセットし、新たな累積を始める
             accumulatedLeft = 0f;
             accumulatedRight = 0f;
-            // リセットと同時に中央に戻すかどうかは仕様によりますが、ここではそのままの状態を維持します。
-            // selectedIndex = 1; // リセット時に中央に戻したい場合はコメントアウトを解除
         }
     }
 
@@ -191,5 +257,15 @@ public class UniformSelector : MonoBehaviour
     public int GetSelectedIndex()
     {
         return selectedIndex;
+    }
+
+    /// <summary>
+    /// GetSelectedIndexで選ばれなかったインデックスの中から、ランダムで選ばれたインデックスを取得します。
+    /// この値はselectedIndexが更新されるたびにランダムに再選択されます。
+    /// </summary>
+    /// <returns>GetSelectedIndexと異なるインデックス (0, 1, または 2) がランダムで設定されます。</returns>
+    public int GetCPUIndex()
+    {
+        return cpuIndex;
     }
 }

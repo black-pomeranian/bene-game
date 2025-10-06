@@ -58,6 +58,9 @@ public class Referee : MonoBehaviour
     [Header("ゲーム設定用変数")]
     [SerializeField] private float kickStartWaitTime = 1.0f;
 
+    [Header("ユニフォーム用変数")]
+    [SerializeField] private UniformSelector uniformSelector;
+
 
     // 現在の状態
     private RefereeState currentState = RefereeState.INIT;
@@ -155,6 +158,9 @@ public class Referee : MonoBehaviour
                     kicker = Instantiate(kickerCpuObj, kickerInitTransform.position, kickerInitTransform.rotation);
                     keeper = Instantiate(keeperObj, keeperInitTransform.position, keeperInitTransform.rotation);
                     uiManager.SetPanelSave();
+                    // ユニフォーム設定
+                    int cpuUniformNum = uniformSelector.GetCPUIndex();
+                    kicker.GetComponent<UniformSetter>().SetUniformMaterial(cpuUniformNum);
                 }
                 else
                 {
@@ -163,6 +169,9 @@ public class Referee : MonoBehaviour
                     kicker = Instantiate(kickerObj, kickerInitTransform.position, kickerInitTransform.rotation);
                     keeper = Instantiate(keeperCpuObj, keeperInitTransform.position, keeperInitTransform.rotation);
                     uiManager.SetPanelKick();
+                    // ユニフォーム設定
+                    int uniformNum = uniformSelector.GetSelectedIndex();
+                    kicker.GetComponent<UniformSetter>().SetUniformMaterial(uniformNum);
                 }
 
                 kicker.OnKicked += HandleKicked;

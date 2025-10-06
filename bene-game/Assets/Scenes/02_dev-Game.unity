@@ -348,13 +348,13 @@ PrefabInstance:
       value: UI
       objectReference: {fileID: 0}
     - target: {fileID: 3163769037429962539, guid: c383cd293bbcc674586a1298290d7738, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1461240264432557795}
+    - target: {fileID: 6028532124133185931, guid: c383cd293bbcc674586a1298290d7738, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7156202731972896095}
-    - target: {fileID: 3163769037429962539, guid: c383cd293bbcc674586a1298290d7738, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 1461240264432557795}
     - target: {fileID: 6415020369172916027, guid: c383cd293bbcc674586a1298290d7738, type: 3}
       propertyPath: sound
       value: 
@@ -416,6 +416,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 854010698671719601, guid: 2955ff2ef2f4dc040bcb2fa1473e685b, type: 3}
   m_PrefabInstance: {fileID: 6434950135922283718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1669419795 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9103008815814070142, guid: c383cd293bbcc674586a1298290d7738, type: 3}
+  m_PrefabInstance: {fileID: 769101399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d321600cfce319d4591ee61d67cbde2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &933638701063614659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -634,6 +645,10 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 769101400}
+    - target: {fileID: 1643737573611749483, guid: 3222a4319ebd696428ddfc758dc57bfc, type: 3}
+      propertyPath: uniformSelector
+      value: 
+      objectReference: {fileID: 1669419795}
     - target: {fileID: 1643737573611749483, guid: 3222a4319ebd696428ddfc758dc57bfc, type: 3}
       propertyPath: ballInitTransform
       value: 

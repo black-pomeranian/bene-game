@@ -2456,6 +2456,7 @@ GameObject:
   - component: {fileID: -6911093498570026509}
   - component: {fileID: -4446421399489391731}
   - component: {fileID: 7662715088663863218}
+  - component: {fileID: 217687774363798956}
   m_Layer: 0
   m_Name: KickerCpu
   m_TagString: Kicker
@@ -2568,6 +2569,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3978031, y: 1.4322944, z: 3.9038768}
   m_Center: {x: 0.19890124, y: 0.21614659, z: -0.44829726}
+--- !u!114 &217687774363798956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9049085777838042714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3474555c7013b3142a8bcf9aa9bd9679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniformMaterials:
+  - {fileID: 2100000, guid: 5f0a709472deb9540965914ef00573dc, type: 2}
+  - {fileID: 2100000, guid: 7d7cde84911d4fe45a18ae311dc40594, type: 2}
+  - {fileID: 2100000, guid: e89660e3d2566ef4f95acee799406476, type: 2}
+  pantsMaterials:
+  - {fileID: 2100000, guid: cfbd840629640d14f9a65bef97022e4a, type: 2}
+  - {fileID: 2100000, guid: fdf8dec81b4b1c94987bfa0414659eb8, type: 2}
+  - {fileID: 2100000, guid: fdf8dec81b4b1c94987bfa0414659eb8, type: 2}
+  selectedUniformIndex: 0
 --- !u!1 &9101958325745126657
 GameObject:
   m_ObjectHideFlags: 0
