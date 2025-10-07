@@ -121,7 +121,7 @@ public static class SwipeUtility
         Cursor.visible = false;
 
         // ƒQ[ƒ€‰æ–Ê“à‚ÉƒƒbƒN
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public static void CursorAppear()

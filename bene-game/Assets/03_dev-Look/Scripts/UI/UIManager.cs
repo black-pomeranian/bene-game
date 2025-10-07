@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject selectUI;
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject endUI;
-    [SerializeField] private GameObject soundUI;
+    /*[SerializeField] private GameObject soundUI;*/
 
     [SerializeField] private TextMeshProUGUI textWin;
     [SerializeField] private TextMeshProUGUI textLose;
@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
         EnableStartUI();
         DisableGameUI();
         DisableEndUI();
-        EnableSoundUI();
+        /*EnableSoundUI();*/
 
         var vp = videoPlayerObj.GetComponent<UnityEngine.Video.VideoPlayer>();
         if (vp != null)
@@ -150,7 +150,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void EnableSoundUI()
+    /*public void EnableSoundUI()
     {
         if (soundUI != null)
         {
@@ -160,15 +160,15 @@ public class UIManager : MonoBehaviour
         {
             Debug.LogError("SoundUIオブジェクトがアサインされていません。");
         }
-    }
+    }*/
 
-    public void DisableSoundUI()
+    /*public void DisableSoundUI()
     {
         if (soundUI != null)
         {
             soundUI.SetActive(false);
         }
-    }
+    }*/
 
     public void SetResult(string result, int playerScore, int cpuScore)
     {
