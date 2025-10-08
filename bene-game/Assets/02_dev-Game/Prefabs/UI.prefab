@@ -1574,7 +1574,6 @@ MonoBehaviour:
   selectUI: {fileID: 8906400232329377446}
   gameUI: {fileID: 4999499626104394870}
   endUI: {fileID: 5268804981141437489}
-  soundUI: {fileID: 7206183326332583264}
   textWin: {fileID: 2399490914461254441}
   textLose: {fileID: 6427162298673756157}
   textPlayerScore: {fileID: 3182782189159371046}
@@ -4773,8 +4772,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -30}
-  m_SizeDelta: {x: 0, y: -60}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1880417357006635507
 CanvasRenderer:
@@ -6266,7 +6265,7 @@ MonoBehaviour:
   - {fileID: 3677904823245164219}
   scaleFactor: 1.5
   transitionSpeed: 10
-  resetThreshold: 100
+  resetThreshold: 80
   sensitivity: 1
   centerBias: 0.2
 --- !u!1 &8970129146692146157

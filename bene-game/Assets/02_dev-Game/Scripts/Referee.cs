@@ -148,8 +148,8 @@ public class Referee : MonoBehaviour
                 ResetParameters();
                 break;
             case RefereeState.MAKE_CHARACTER:
-                SwipeUtility.CursorDisappear();
                 currentTimer = 0.0f;
+                SwipeUtility.CursorDisappear();
                 // Œ»İ‚Ì–ğŠ„‚Æ‹t‚Ì–ğŠ„‚ÉƒgƒOƒ‹‚µ‚Ä‚©‚ç
                 if (playerRule == PlayerRule.KICKER)
                 {
@@ -353,7 +353,6 @@ public class Referee : MonoBehaviour
     public void GameEnd()
     {
         isGameStarted = false;
-        SwipeUtility.CursorAppear();
         uiManager.DisableGameUI();
         uiManager.EnableEndUI();
         bgmPlayer.PlayBGM(2);
