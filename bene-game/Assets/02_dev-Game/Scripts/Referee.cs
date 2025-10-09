@@ -157,7 +157,7 @@ public class Referee : MonoBehaviour
                     playerRule = PlayerRule.KEEPER;
                     kicker = Instantiate(kickerCpuObj, kickerInitTransform.position, kickerInitTransform.rotation);
                     keeper = Instantiate(keeperObj, keeperInitTransform.position, keeperInitTransform.rotation);
-                    uiManager.SetPanelSave();
+                    /*uiManager.SetPanelSave();*/
                     // ユニフォーム設定
                     int cpuUniformNum = uniformSelector.GetCPUIndex();
                     kicker.GetComponent<UniformSetter>().SetUniformMaterial(cpuUniformNum);
@@ -168,7 +168,7 @@ public class Referee : MonoBehaviour
                     playerRule = PlayerRule.KICKER;
                     kicker = Instantiate(kickerObj, kickerInitTransform.position, kickerInitTransform.rotation);
                     keeper = Instantiate(keeperCpuObj, keeperInitTransform.position, keeperInitTransform.rotation);
-                    uiManager.SetPanelKick();
+                    /*uiManager.SetPanelKick();*/
                     // ユニフォーム設定
                     int uniformNum = uniformSelector.GetSelectedIndex();
                     kicker.GetComponent<UniformSetter>().SetUniformMaterial(uniformNum);

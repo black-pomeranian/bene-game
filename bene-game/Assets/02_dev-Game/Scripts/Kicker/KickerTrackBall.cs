@@ -15,9 +15,14 @@ public class KickerTrackBall : Kicker
     [SerializeField] private float heightSensitivity = 0.1f;
     [SerializeField] private float timingCycle = 2f;
     [SerializeField] private float justTiming = 0.3f;
-    [SerializeField] private GameObject timingCircle;
-    [SerializeField] private GameObject justCircle;
-    [SerializeField] private GameObject stoppingCircle;
+    [SerializeField] private float timingUIScaler = 10f;
+    [SerializeField] private GameObject timingCirclesPrefab; // Canvas付きプレハブ
+
+    // 動的生成されたCanvasインスタンス
+    private GameObject timingCirclesInstance;
+    private GameObject timingCircle;
+    private GameObject justCircle;
+    private GameObject stoppingCircle;
 
     private Vector2 accumulatedDelta;
     private float timingValue;
@@ -27,48 +32,53 @@ public class KickerTrackBall : Kicker
     {
         if (state == KickerState.STANDBY)
         {
-            timingCircle.SetActive(false);
-            justCircle.SetActive(false);
-            stoppingCircle.SetActive(false);
+            DestroyTimingUI();
         }
         else if (state == KickerState.AIM)
         {
-            timingCircle.SetActive(true);
-            justCircle.SetActive(true);
-            justCircle.GetComponent<RectTransform>().localScale = Vector3.one * justTiming;
+            // UIを生成
+            CreateTimingUI();
+
+            if (justCircle != null)
+                justCircle.transform.localScale = Vector3.one * justTiming * timingUIScaler;
+
             accumulatedDelta = Vector2.zero;
             swipeStartTime = Time.time;
         }
+
         base.EnterState(state);
     }
 
     protected override void ExitState(KickerState state)
     {
-        if(state == KickerState.AIM)
+        if (state == KickerState.AIM)
         {
-            timingCircle.SetActive(false);
-            stoppingCircle.SetActive(true);
-            stoppingCircle.GetComponent<RectTransform>().localScale = Vector3.one * timingValue;
+            if (timingCircle != null)
+                timingCircle.SetActive(false);
+
+            if (stoppingCircle != null)
+            {
+                stoppingCircle.SetActive(true);
+                stoppingCircle.transform.localScale = Vector3.one * timingValue * timingUIScaler;
+            }
         }
         else if (state == KickerState.KICK)
         {
-            stoppingCircle.SetActive(false);
-            justCircle.SetActive(false);
+            DestroyTimingUI();
         }
+
         base.ExitState(state);
     }
 
     // WAIT状態の更新
     protected override void UpdateWaitState()
     {
-        // とりあえず何も待たずに遷移
         ChangeState(KickerState.AIM);
     }
 
     // AIM状態の更新
     protected override void UpdateAimState()
     {
-        // トラックボール入力（マウス移動量）
         Vector2 delta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         accumulatedDelta += delta;
 
@@ -79,20 +89,14 @@ public class KickerTrackBall : Kicker
             float elapsed = Time.time - swipeStartTime;
             float swipeSpeed = accumulatedDelta.magnitude / (elapsed + 0.001f);
 
-            // 入力ベクトル
             Vector3 inputDir = new Vector3(-accumulatedDelta.x * xSensitivity, 0, -accumulatedDelta.y * xSensitivity);
 
-            // 入力方向の角度を取得
             float inputAngle = Vector3.SignedAngle(Vector3.back, inputDir.normalized, Vector3.up);
+            float normalized = Mathf.Clamp(inputAngle / inputAngleRange, -1f, 1f);
+            float mappedAngle = normalized * maxAngle;
 
-            // 入力角度（±inputAngleRange）→ ゲーム角度（±maxAngle）にマッピング
-            float normalized = Mathf.Clamp(inputAngle / inputAngleRange, -1f, 1f); // -1〜1 に正規化
-            float mappedAngle = normalized * maxAngle; // ±maxAngle にスケーリング
-
-            // 方向ベクトルを生成
             Vector3 direction = Quaternion.Euler(0, mappedAngle, 0) * Vector3.back;
 
-            // 高さ・速度計算
             float heightFactor = Mathf.Clamp(swipeSpeed * heightSensitivity, minHeight, maxHeight);
             float timingMultiplier = GetTimingMultiplier();
 
@@ -113,7 +117,7 @@ public class KickerTrackBall : Kicker
 
         if (timingCircle != null)
         {
-            timingCircle.GetComponent<RectTransform>().localScale = Vector3.one * timingValue;
+            timingCircle.transform.localScale = Vector3.one * timingValue * timingUIScaler;
         }
     }
 
@@ -121,5 +125,39 @@ public class KickerTrackBall : Kicker
     {
         float diff = Mathf.Abs(timingValue - justTiming);
         return Mathf.Lerp(maxKickForce, minKickForce, diff * 2f);
+    }
+
+    private void CreateTimingUI()
+    {
+        if (timingCirclesPrefab == null)
+        {
+            Debug.LogWarning("timingCirclesPrefab が設定されていません。");
+            return;
+        }
+
+        // すでに存在していれば削除
+        if (timingCirclesInstance != null)
+            Destroy(timingCirclesInstance);
+
+        timingCirclesInstance = Instantiate(timingCirclesPrefab);
+
+        // 子オブジェクト参照取得
+        timingCircle = timingCirclesInstance.transform.Find("timingCircle")?.gameObject;
+        justCircle = timingCirclesInstance.transform.Find("justCircle")?.gameObject;
+        stoppingCircle = timingCirclesInstance.transform.Find("stoppingCircle")?.gameObject;
+
+        // 初期表示
+        if (timingCircle != null) timingCircle.SetActive(true);
+        if (justCircle != null) justCircle.SetActive(true);
+        if (stoppingCircle != null) stoppingCircle.SetActive(false);
+    }
+
+    private void DestroyTimingUI()
+    {
+        if (timingCirclesInstance != null)
+        {
+            Destroy(timingCirclesInstance);
+            timingCirclesInstance = null;
+        }
     }
 }
