@@ -16,8 +16,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textPlayerScore;
     [SerializeField] private TextMeshProUGUI textCpuScore;
 
-    [SerializeField] GameObject panelKick;
-    [SerializeField] GameObject panelSave;
+    /*[SerializeField] GameObject panelKick;
+    [SerializeField] GameObject panelSave;*/
 
     [SerializeField] private float idleTimeToPlayVideo = 30f;
     [SerializeField] private GameObject videoPlayerObj;
@@ -193,17 +193,17 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void SetPanelKick()
+    /*public void SetPanelKick()
     {
         panelKick.gameObject.SetActive(true);
         panelSave.gameObject.SetActive(false);
-    }
+    }*/
 
-    public void SetPanelSave()
+    /*public void SetPanelSave()
     {
         panelKick.gameObject.SetActive(false);
         panelSave.gameObject.SetActive(true);
-    }
+    }*/
 
     private bool IsAnyInputDetected()
     {
