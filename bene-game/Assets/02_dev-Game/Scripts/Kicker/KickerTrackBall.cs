@@ -9,7 +9,6 @@ public class KickerTrackBall : Kicker
     [SerializeField] private float moveThreshold = 50f;
     [SerializeField] private float inputAngleRange = 120f;
     [SerializeField] private float maxAngle = 30f;
-    [SerializeField] private float xSensitivity = 0.5f;
     [SerializeField] private float minHeight = 0.1f;
     [SerializeField] private float maxHeight = 1.5f;
     [SerializeField] private float heightSensitivity = 0.1f;
@@ -89,7 +88,7 @@ public class KickerTrackBall : Kicker
             float elapsed = Time.time - swipeStartTime;
             float swipeSpeed = accumulatedDelta.magnitude / (elapsed + 0.001f);
 
-            Vector3 inputDir = new Vector3(-accumulatedDelta.x * xSensitivity, 0, -accumulatedDelta.y * xSensitivity);
+            Vector3 inputDir = new Vector3(-accumulatedDelta.x, 0, -accumulatedDelta.y);
 
             float inputAngle = Vector3.SignedAngle(Vector3.back, inputDir.normalized, Vector3.up);
             float normalized = Mathf.Clamp(inputAngle / inputAngleRange, -1f, 1f);
